@@ -1,0 +1,23 @@
+<odoo>
+    <menuitem id="menu_dock_price_root" name="Gestion des Prix" sequence="10" />
+    <menuitem id="menu_dock_price" name="Prix Acconage et Relevage" parent="menu_dock_price_root" action="action_dock_price" sequence="1"/>
+    <menuitem id="menu_dock_category" name="Catégories Acconage" parent="menu_dock_price_root"
+              action="action_dock_category"
+              sequence="20"/>
+    <!-- Menu -->
+    <menuitem id="menu_dock_setting"
+              name="Configuration"
+              parent="menu_dock_price_root"
+              sequence="20"/>
+
+    <menuitem id="menu_dock_setting_transport"
+              name="Transport"
+              parent="menu_dock_price_root"
+              sequence="1"/>
+
+    <menuitem id="menu_dock_transport_zone"
+              name="Zones de Transport"
+              parent="menu_dock_setting_transport"
+              action="action_dock_transport_zone"
+              sequence="10"/>
+</odoo>

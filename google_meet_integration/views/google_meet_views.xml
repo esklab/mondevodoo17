@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <!-- Vue pour le bouton de connexion Google -->
+        <record id="view_google_meet_login_button" model="ir.ui.view">
+            <field name="name">google_meet.login.button</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+               <!-- <div>
+                    <button string="Connecter avec Google" type="object" name="google_meet_oauth_redirect"/>
+                </div>-->
+                <xpath expr="//page[@name='preferences_page']" position="inside">
+                <notebook>
+                    <page name="google_meet_page"
+                          string="Google Meet Token">
+                        <div>
+                            <group>
+                                <button string="Connecter avec Google" icon="fa-globe"
+                                        type="object"
+                                        name="authorize_google_credentials"
+                                        class="btn-primary" colspan="2"/>
+                            </group>
+                            <div invisible="not google_access_token">
+                                <label for="google_access_token"/>
+                                <field name="google_access_token" readonly='1'
+                                       class="w-100 overflow-hidden"/>
+                            </div>
+                            <div invisible="not google_refresh_token">
+                                <label for="google_refresh_token"/>
+                                <field name="google_refresh_token" readonly='1'
+                                       class="w-100 overflow-hidden"/>
+                            </div>
+                        </div>
+                    </page>
+                </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Action pour le bouton de connexion Google -->
+        <record id="action_google_meet_login_button" model="ir.actions.act_window">
+            <field name="name">Connecter avec Google</field>
+            <field name="res_model">res.users</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menu pour le bouton de connexion Google -->
+        <menuitem id="menu_google_meet_login_button" name="Connecter avec Google" action="action_google_meet_login_button"/>
+    </data>
+</odoo>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="payroll_pdf_view_report" model="ir.actions.report">
+        <field name="name">Livre de paie</field>
+        <field name="model">print.payrollpdf.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">th_custum_payroll.th_paie_pdf_report_view</field>
+        <field name="report_file">th_custum_payroll.th_paie_pdf_report_view</field>
+        <field name="paperformat_id" ref="paperformat_bulletin_paie"/>
+    </record>
+
+    <template id="th_paie_pdf_report_view">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <style type="text/css">
+                    .MyTable {
+                        border-collapse: collapse;
+                        border: 1px solid #000;
+                        width: 100%;
+                        font-family: 'Arial', sans-serif;
+                        font-size: 12px;
+                    }
+                    .MyTable th, .MyTable td {
+                        border: 1px solid #000;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                    .MyTable th {
+                        background-color: #f2f2f2;
+                        font-weight: bold;
+                    }
+                    .MyTable .entete th {
+                        text-align: left;
+                    }
+                    .page-title {
+                        text-align: center;
+                        color: #1F3E7C;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                    }
+                    .company-info {
+                        text-align: center;
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                    }
+                    .montant {
+                        text-align: right;
+                        padding-right: 5px;
+                    }
+                    .text-right {
+                        text-align: right;
+                    }
+                    .page-break {
+                        page-break-before: always;
+                    }
+                </style>
+                <t t-set="page" t-value="1"/>
+                <t t-foreach="toute_les_liste_a_traiter" t-as="employee_groupe">
+                    <div class="page">
+					<table class="MyTable entete">
+								<tr>
+									<td width="45%">
+									<img t-if="compayinfo['logo']" t-attf-src="data:image/*;base64,{{compayinfo['logo']}}" style="width: 200px; margin-top:30px; margin-bottom:5px;"/>
+									</td>
+									<td><h3 style="color : rgb(31,62,124);">LIVRE MENSUEL DE PAIE</h3>
+									<p><span  class="company" t-esc="compayinfo['company_name']"/><br/>
+									<span t-esc="compayinfo['street']"/><br/>
+									<span t-esc="compayinfo['zip']"/> <span t-esc="compayinfo['city']"/> -<span t-esc="compayinfo['country']"/><br/>
+									Tel : <span t-esc="compayinfo['phone']"/> / E-mail : <span t-esc="compayinfo['email']"/><br/>
+									</p>
+									</td>
+								</tr>
+							</table>
+
+                        <h4 class="text-center">PAIE DU MOIS DE <t t-esc="employee_groupe[0]['date_from'].upper()"/></h4>
+                        <table class="MyTable">
+                            <thead>
+                                <tr>
+                                    <th>Rubriques</th>
+                                    <t t-foreach="employee_groupe" t-as="head_employee">
+                                        <th><t t-esc="head_employee['employee_name']"/></th>
+                                    </t>
+                                </tr>
+                                <tr>
+                                    <th>Matricule</th>
+                                    <t t-foreach="employee_groupe" t-as="head_employee">
+                                        <th><t t-esc="head_employee['matricule']"/></th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="heads" t-as="head">
+                                    <tr>
+                                        <t t-if="head[0] in ['Total brut', 'Total cotisation', 'Salaire Net']">
+                                            <th><t t-esc="head[0]"/></th>
+                                        </t>
+                                        <t t-else="">
+                                            <td><t t-esc="head[0]"/></td>
+                                        </t>
+                                        <t t-foreach="employee_groupe" t-as="employee_en_cour">
+                                            <t t-set="compteur" t-value="0"/>
+                                            <t t-foreach="employee_en_cour['lines']" t-as="line">
+                                                <t t-if="line['code'] == head[1]">
+                                                    <t t-if="head[0] in ['Total brut', 'Total cotisation', 'Salaire Net']">
+                                                        <th class="montant"><t t-esc="'{:,}'.format(round(line['total'])).replace(',', ' ')"/></th>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <td class="montant"><t t-esc="'{:,}'.format(round(line['total'])).replace(',', ' ')"/></td>
+                                                    </t>
+                                                    <t t-set="compteur" t-value="compteur + 1"/>
+                                                </t>
+                                            </t>
+                                            <t t-if="compteur == 0">
+                                                <td>0</td>
+                                            </t>
+                                        </t>
+                                    </tr>
+                                </t>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Nombre d'employés</th>
+                                    <t t-foreach="range(len(employee_groupe))" t-as="emp">
+                                        <th>
+                                            <t t-if="employee_groupe_last and emp_last">
+                                                <t t-esc="nombre_employee"/>
+                                            </t>
+                                        </th>
+                                    </t>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="text-right">
+                            <span>Page </span><span class="page" t-esc="page"/> sur <span class="topage" t-esc="len(toute_les_liste_a_traiter)"/>
+                        </div>
+                        <t t-set="page" t-value="page + 1"/>
+                        <div class="page-break"></div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

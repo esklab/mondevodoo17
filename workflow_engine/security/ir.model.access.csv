@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_workflow_model_admin,workflow.model.admin,model_workflow_model,group_workflow_admin,1,1,1,1
+access_workflow_model_manager,workflow.model.manager,model_workflow_model,group_workflow_manager,1,1,1,0
+access_workflow_model_user,workflow.model.user,model_workflow_model,group_workflow_user,1,0,1,0
+
+access_workflow_state_admin,workflow.state.admin,model_workflow_state,group_workflow_admin,1,1,1,1
+access_workflow_state_manager,workflow.state.manager,model_workflow_state,group_workflow_manager,1,1,1,0
+access_workflow_state_user,workflow.state.user,model_workflow_state,group_workflow_user,1,0,0,0
+
+access_workflow_transition_admin,workflow.transition.admin,model_workflow_transition,group_workflow_admin,1,1,1,1
+access_workflow_transition_manager,workflow.transition.manager,model_workflow_transition,group_workflow_manager,1,1,1,0
+
+access_workflow_trash_admin,workflow.trash.admin,model_workflow_trash,group_workflow_admin,1,1,1,1
+access_workflow_trash_manager,workflow.trash.manager,model_workflow_trash,group_workflow_manager,1,1,1,0
+
+access_workflow_history_admin,workflow.history.admin,model_workflow_history,group_workflow_admin,1,1,1,1
+access_workflow_history_user,workflow.history.user,model_workflow_history,group_workflow_user,1,0,0,0

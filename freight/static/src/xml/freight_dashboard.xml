@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="FreightDashboard">
+        <!--View-->
+        <div class="hr_dash col-xs-12 col-md-12 col-lg-12 col-sm-12 o_action_delegate_scroll" style='overflow: auto;height: 100%;'>
+            <!--<style type="text/css" t-if="! widget.isFirefox">-->
+                <!--.o_control_panel.o_breadcrumb_full {-->
+                    <!--display: none;-->
+                <!--}-->
+            <!--</style>-->
+            <div class="col-md-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="media">
+                                <a class="pull-left my_profile" t-on-click="(e) => this.action_my_profile(e)">
+                                    <img class="media-object dp img-circle"
+                                      t-attf-src="/web/image/hr.employee/{{employee_data.id}}/avatar_128"
+                                         style="width: 100px;height:100px;"/>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><span t-esc="employee_data.display_name"/></h4>
+                                    <h5 t-if="employee_data.job_id"><span t-esc="employee_data.job_id[1]"/></h5>
+                                    <h5><span t-esc="employee_data.public_info"/></h5>
+                                    <hr style="margin:8px auto"/>
+                                    <t t-foreach="employee_data.categories" t-as="c" t-key="c">
+                                        <span class="label label-default"><t t-esc="c"/></span>
+                                    </t>
+                                    <br/>
+                                    <!--<span><small>Last login:<span t-esc="employee_data.last_login"/></small></span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--dashboard boxes-->
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-1">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-fw fa-truck"/>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count"><t t-esc="employee_data.direct_operation_count"/></span>
+                                    <span class="dash-box-title">Direct</span>
+                                </div>
+
+                                <div class="dash-box-action direct-shipment" t-on-click="(e) => this.direct_shipment(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-2">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count"><t t-esc="employee_data.house_operation_count"/></span>
+                                    <span class="dash-box-title">House</span>
+                                </div>
+
+                                <div class="dash-box-action house-shipment" t-on-click="(e) => this.house_shipment(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-3">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-truck"></i>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count"><t t-esc="employee_data.master_operation_count"/></span>
+                                    <span class="dash-box-title">Master</span>
+                                </div>
+
+                                <div class="dash-box-action master-shipment" t-on-click="(e) => this.master_shipment(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-4">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-dollar"/>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count">
+                                        <t t-esc="employee_data.invoice_count"/>
+                                    </span>
+                                    <span class="dash-box-title">Customer Invoices</span>
+                                </div>
+
+                                <div class="dash-box-action invoices" t-on-click="(e) => this.action_invoice(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-5">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-dollar"/>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count"><t t-esc="employee_data.bills_count"/></span>
+                                    <span class="dash-box-title">Vendor Bills</span>
+                                </div>
+
+                                <div class="dash-box-action bills" t-on-click="(e) => this.action_bills(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="dash-box dash-box-color-6">
+                                <div class="dash-box-icon">
+                                    <i class="fa fa-chain"/>
+                                </div>
+                                <div class="dash-box-body">
+                                    <span class="dash-box-count"><t t-esc="employee_data.port_count"/></span>
+                                    <span class="dash-box-title">Ports</span>
+                                </div>
+
+                                <div class="dash-box-action ports" t-on-click="(e) => this.action_ports(e)">
+                                    <button>More Info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Charts-->
+            <!--label for charts-->
+
+
+            <div class="col-md-12">
+				<div class="container-fluid">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="panel">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">Operations</h3>
+                              </div>
+                              <div class="panel-body">
+                                    <canvas id="myChart"/>
+                                    <button id="generate_payroll_pdf" class="btn btn-default"
+                                        data-placement="bottom" title="Download Pdf!" t-on-click="(e) => this.generate_payroll_pdf('bar')">
+                                        <i class="fa fa-2x fa-file-pdf-o"/> Download
+                                    </button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="panel">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title">Shippers</h3>
+                              </div>
+                              <div class="panel-body">
+                                  <canvas id="attendanceChart"/>
+                                  <button id="generate_created_by_pdf" class="btn btn-default"
+                                          data-placement="bottom" title="Download Pdf" t-on-click="(e) => this.generate_payroll_pdf('pie')">
+                                      <i class="fa fa-2x fa-file-pdf-o"/> Download
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12" style="overflow-x: scroll;">
+                        <h4>Operation Details</h4>
+                        <table id="operation_details" class="display nowrap" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Direction</th>
+                                    <th>Transport</th>
+                                    <th>Operation</th>
+                                    <th>Shipper</th>
+                                    <th>Source location</th>
+                                    <th>Destination location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="employee_data.operation_table" t-as="e" t-key="e">
+                                    <td><span t-esc="e['name']"/></td>
+                                    <td><span t-esc="e['direction']"/></td>
+                                    <td><span t-esc="e['transport']"/></td>
+                                    <td><span t-esc="e['operation']"/></td>
+                                    <td><span t-esc="e['shipper']"/></td>
+                                    <td><span t-esc="e['source_location']"/></td>
+                                    <td><span t-esc="e['destination_location']"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

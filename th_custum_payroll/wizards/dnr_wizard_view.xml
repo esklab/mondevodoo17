@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="print_dnr_report_form">
+		<field name="name">print_dnr_report</field>
+		<field name="model">payroll.report.xlswiz</field>
+		<field name="arch" type="xml">
+			<form string="Déclaration Nominative de">
+				<group>
+					<group>
+						<field name="periode_id"/>
+					</group>
+                    <group>
+						<field name="annee"/>
+					</group>
+				</group>
+				<footer>
+					<button name="generate_xlsx_report" string="imprimer" type="object" class="btn-primary"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_payroll_excel">
+        <field name="name">view.payrol.report.excel</field>
+        <field name="model">payroll.report.excel</field>
+        <field name="arch" type="xml">
+            <form string="Télécharger la DNR ici">
+                <field name="name" invisible="1"/>
+                <field name="file_download" filename="name"/>
+            </form>
+        </field>
+    </record>
+
+	<record id="action_print_dnr_report" model="ir.actions.act_window">
+		<field name="name">Délcaration Nominative de Revenue</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">payroll.report.xlswiz</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="print_dnr_report_form"/>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem 
+		id="menu_dnr_wizard_report" 
+		name="DNR" 
+		action="action_print_dnr_report"
+		parent="menu_rapport_payroll_pdf_report"
+	/>
+
+</odoo>

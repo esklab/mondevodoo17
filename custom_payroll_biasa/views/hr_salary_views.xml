@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View hr.salary View Tree -->
+    <record id="view_hr_salary_tree" model="ir.ui.view">
+        <field name="name">view.hr.salary.tree</field>
+        <field name="model">hr.salary</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="type_agent_id"/>
+                <field name="classe_id"/>
+                <field name="echelon_id"/>
+                <field name="montant"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View hr.salary form -->
+    <record id="view_hr_salary_form" model="ir.ui.view">
+        <field name="name">view.hr.salary.form</field>
+        <field name="model">hr.salary</field>
+        <field name="arch" type="xml">
+            <form string="Hr Salary">
+                <field name="type_agent_id"/>
+                <field name="classe_id"/>
+                <field name="echelon_id"/>
+                <field name="montant"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action to open salary form -->
+    <record id="action_hr_salary_form" model="ir.actions.act_window">
+        <field name="name">Salaires</field>
+        <field name="res_model">hr.salary</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hr_salary_tree"/>
+    </record>
+
+    <menuitem 
+        id="menu_hr_salary_form" 
+        name="Salaires BIASA" 
+        action="action_hr_salary_form" 
+        parent="hr_payroll.menu_hr_salary_configuration"/>
+</odoo>

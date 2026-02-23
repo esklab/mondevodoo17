@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_prescription_order_form_inherit" model="ir.ui.view">
+        <field name="name">prescription.order.form.inherit</field>
+        <field name="model">prescription.order</field>
+        <field name="inherit_id" ref="acs_hms.view_hms_prescription_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="action_sync_to_consumables"
+                        string="Ajouter aux consommables"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-medkit"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

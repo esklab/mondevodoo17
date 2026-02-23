@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_order_form_inherit_universe" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.universe</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="order_universe_id" required="True"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='product_id']" position="attributes">
+                <attribute name="domain">[('categ_id.universe_ids', 'in', parent.order_universe_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

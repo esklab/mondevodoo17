@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_public_publicite_manager,public_publicite_manager,model_public_publicite,base_group.user,1,1,1,1

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<menuitem id="stock_report_menu" name="Rapport de Stock" parent="stock.menu_stock_root"/>
+<record id="stock_report_action_wizard" model="ir.actions.act_window">
+    <field name="name">Générer Rapport de Stock</field>
+    <field name="res_model">stock.report.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+</record>
+<menuitem id="stock_report_menu_item" name="Générer Rapport" parent="stock_report_menu" action="stock_report_action_wizard"/>
+</odoo>

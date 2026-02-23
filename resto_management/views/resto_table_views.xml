@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resto.table View tree -->
+    <record id="view_resto_table_tree" model="ir.ui.view">
+        <field name="name">view.resto.table.tree</field>
+        <field name="model">resto.table</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="seats"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View resto.table form -->
+    <record id="view_resto_table_form" model="ir.ui.view">
+        <field name="name">view.resto.table.form</field>
+        <field name="model">resto.table</field>
+        <field name="arch" type="xml">
+            <form string="Restaurant Table">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="seats"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+    <!-- View resto.table search -->
+    <record id="view_resto_table_search" model="ir.ui.view">
+        <field name="name">view.resto.table.search</field>
+        <field name="model">resto.table</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                    <filter string="State" name="state" domain="[]" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action resto.table -->
+    <record id="action_resto_table" model="ir.actions.act_window">
+        <field name="name">Resto Table</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resto.table</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Resto Table.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_restaurant" name="Restaurant" sequence="10" />
+    <menuitem id="menu_restaurant_table" name="Tables" parent="menu_restaurant" action="action_resto_table" />
+    
+</odoo>

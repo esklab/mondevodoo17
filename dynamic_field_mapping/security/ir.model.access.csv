@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.dynamic.field.mapping,access_dynamic_field_mapping,model_dynamic_field_mapping,base.group_user,1,1,1,1
+access.dynamic_field_mapping_line,access_dynamic_field_mapping_line,model_dynamic_field_mapping_line,base.group_user,1,1,1,1

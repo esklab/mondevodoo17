@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View school.matiere View Tree -->
+    <record id="view_school_matiere_tree" model="ir.ui.view">
+        <field name="name">view.school.matiere.tree</field>
+        <field name="model">school.matiere</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View school.matiere form -->
+    <record id="view_school_matiere_form" model="ir.ui.view">
+        <field name="name">view.school.matiere.form</field>
+        <field name="model">school.matiere</field>
+        <field name="arch" type="xml">
+            <form string="School matiere">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action school.matiere -->
+    <record id="action_school_matiere" model="ir.actions.act_window">
+        <field name="name">School matiere</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.matiere</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="school_matiere_menu"
+        name="School matiere"
+        action="action_school_matiere"
+        parent="student_school_menu"
+        sequence="100"/>
+</odoo>

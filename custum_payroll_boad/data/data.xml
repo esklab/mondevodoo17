@@ -1,0 +1,350 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Enregistrements pour les types de salaires -->
+        <record model="hr.type.salary" id="type_salaire_categorie">
+            <field name="name">CATEGORIES</field>
+        </record>
+        <record model="hr.type.salary" id="type_salaire_classe">
+            <field name="name">CLASSES</field>
+        </record>
+
+        <!-- Enregistrements pour les rangs categories-->
+        <record model="hr.rang" id="rang_ct1">
+            <field name="name">1ER</field>
+        </record>
+        <record model="hr.rang" id="rang_ct2">
+            <field name="name">2EME</field>
+        </record>
+        <record model="hr.rang" id="rang_ct3">
+            <field name="name">3EME</field>
+        </record>
+        <record model="hr.rang" id="rang_ct4">
+            <field name="name">4EME</field>
+        </record>
+        <record model="hr.rang" id="rang_ct5">
+            <field name="name">5EME</field>
+        </record>
+        <record model="hr.rang" id="rang_ct6">
+            <field name="name">6EME</field>
+        </record>
+        <record model="hr.rang" id="rang_ct7">
+            <field name="name">7EME</field>
+        </record>
+
+         <!-- Enregistrements pour les rangs classes-->
+         <record model="hr.rang" id="rang_cl1">
+            <field name="name">I</field>
+        </record>
+        <record model="hr.rang" id="rang_cl2">
+            <field name="name">II</field>
+        </record>
+        <record model="hr.rang" id="rang_cl3">
+            <field name="name">III</field>
+        </record>
+        <record model="hr.rang" id="rang_cl4">
+            <field name="name">IV</field>
+        </record>
+        <record model="hr.rang" id="rang_cl5">
+            <field name="name">V</field>
+        </record>
+        <record model="hr.rang" id="rang_cl6">
+            <field name="name">VI</field>
+        </record>
+        <record model="hr.rang" id="rang_cl7">
+            <field name="name">VII</field>
+        </record>
+        <record model="hr.rang" id="rang_cl8">
+            <field name="name">VIII</field>
+        </record>
+
+        <!-- Enregistrements pour les échelons -->
+        <record model="hr.echelon" id="echelon_a">
+            <field name="name">A</field>
+        </record>
+        <record model="hr.echelon" id="echelon_b">
+            <field name="name">B</field>
+        </record>
+        <record model="hr.echelon" id="echelon_c">
+            <field name="name">C</field>
+        </record>
+
+        <!-- Enregistrements pour les salaires Categories-->
+        <record model="hr.salary" id="salary_1">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct1"/>
+            <field name="points">230</field>
+        </record>
+        <record model="hr.salary" id="salary_2">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct2"/>
+            <field name="points">245</field>
+        </record>
+        <record model="hr.salary" id="salary_3">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct3"/>
+            <field name="points">260</field>
+        </record>
+        <record model="hr.salary" id="salary_4">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct4"/>
+            <field name="points">298</field>
+        </record>
+        <record model="hr.salary" id="salary_5">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct5"/>
+            <field name="points">406</field>
+        </record>
+        <record model="hr.salary" id="salary_6">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct6"/>
+            <field name="points">479</field>
+        </record>
+        <record model="hr.salary" id="salary_7">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_ct7"/>
+            <field name="points">648</field>
+        </record>
+
+        <record model="hr.salary" id="salary_8">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct1"/>
+            <field name="points">0.0</field>
+        </record>
+        <record model="hr.salary" id="salary_9">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct2"/>
+            <field name="points">250</field>
+        </record>
+        <record model="hr.salary" id="salary_10">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct3"/>
+            <field name="points">270</field>
+        </record>
+        <record model="hr.salary" id="salary_11">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct4"/>
+            <field name="points">322</field>
+        </record>
+        <record model="hr.salary" id="salary_12">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct5"/>
+            <field name="points">431</field>
+        </record>
+        <record model="hr.salary" id="salary_13">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct6"/>
+            <field name="points">533</field>
+        </record>
+        <record model="hr.salary" id="salary_14">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_ct7"/>
+            <field name="points">697</field>
+        </record>
+
+        <record model="hr.salary" id="salary_15">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct1"/>
+            <field name="points">0.0</field>
+        </record>
+        <record model="hr.salary" id="salary_16">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct2"/>
+            <field name="points">255</field>
+        </record>
+        <record model="hr.salary" id="salary_17">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct3"/>
+            <field name="points">285</field>
+        </record>
+        <record model="hr.salary" id="salary_18">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct4"/>
+            <field name="points">383</field>
+        </record>
+        <record model="hr.salary" id="salary_19">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct5"/>
+            <field name="points">455</field>
+        </record>
+        <record model="hr.salary" id="salary_20">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct6"/>
+            <field name="points">581</field>
+        </record>
+        <record model="hr.salary" id="salary_21">
+            <field name="type_salary_id" ref="type_salaire_categorie"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_ct7"/>
+            <field name="points">745</field>
+        </record>
+
+        <!-- Enregistrements pour les salaires Classes-->
+        <record model="hr.salary" id="salary_22">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl1"/>
+            <field name="points">799</field>
+        </record>
+        <record model="hr.salary" id="salary_23">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl2"/>
+            <field name="points">847</field>
+        </record>
+        <record model="hr.salary" id="salary_24">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl3"/>
+            <field name="points">920</field>
+        </record>
+        <record model="hr.salary" id="salary_25">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl4"/>
+            <field name="points">1041</field>
+        </record>
+        <record model="hr.salary" id="salary_26">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl5"/>
+            <field name="points">1283</field>
+        </record>
+        <record model="hr.salary" id="salary_27">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl6"/>
+            <field name="points">1490</field>
+        </record>
+        <record model="hr.salary" id="salary_28">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl7"/>
+            <field name="points">1693</field>
+        </record>
+        <record model="hr.salary" id="salary_29">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_a"/>
+            <field name="rang_id" ref="rang_cl8"/>
+            <field name="points">1918</field>
+        </record>
+
+        <record model="hr.salary" id="salary_30">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl1"/>
+            <field name="points">823</field>
+        </record>
+        <record model="hr.salary" id="salary_31">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl2"/>
+            <field name="points">884</field>
+        </record>
+        <record model="hr.salary" id="salary_32">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl3"/>
+            <field name="points">981</field>
+        </record>
+        <record model="hr.salary" id="salary_33">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl4"/>
+            <field name="points">1140</field>
+        </record>
+        <record model="hr.salary" id="salary_34">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl5"/>
+            <field name="points">1352</field>
+        </record>
+        <record model="hr.salary" id="salary_35">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl6"/>
+            <field name="points">1560</field>
+        </record>
+        <record model="hr.salary" id="salary_36">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl7"/>
+            <field name="points">1762</field>
+        </record>
+        <record model="hr.salary" id="salary_37">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_b"/>
+            <field name="rang_id" ref="rang_cl8"/>
+            <field name="points">1987</field>
+        </record>
+
+        <record model="hr.salary" id="salary_38">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl1"/>
+            <field name="points">0.0</field>
+        </record>
+        <record model="hr.salary" id="salary_39">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl2"/>
+            <field name="points">0.0</field>
+        </record>
+        <record model="hr.salary" id="salary_40">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl3"/>
+            <field name="points">0.0</field>
+        </record>
+        <record model="hr.salary" id="salary_41">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl4"/>
+            <field name="points">1238</field>
+        </record>
+        <record model="hr.salary" id="salary_42">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl5"/>
+            <field name="points">1421</field>
+        </record>
+        <record model="hr.salary" id="salary_43">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl6"/>
+            <field name="points">1629</field>
+        </record>
+        <record model="hr.salary" id="salary_44">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl7"/>
+            <field name="points">1832</field>
+        </record>
+        <record model="hr.salary" id="salary_45">
+            <field name="type_salary_id" ref="type_salaire_classe"/>
+            <field name="echelon_id" ref="echelon_c"/>
+            <field name="rang_id" ref="rang_cl8"/>
+            <field name="points">2056</field>
+        </record>
+    </data>
+</odoo>

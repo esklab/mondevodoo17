@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View x_resultat_lab View List -->
+    <record id="view_x_resultat_lab_list" model="ir.ui.view">
+        <field name="name">view.x_resultat_lab.list</field>
+        <field name="model">x_resultat_lab</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View x_resultat_lab form -->
+    <record id="view_x_resultat_lab_form" model="ir.ui.view">
+        <field name="name">view.x_resultat_lab.form</field>
+        <field name="model">x_resultat_lab</field>
+        <field name="arch" type="xml">
+            <form string="X_resultat_lab">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View x_resultat_lab search -->
+    <record id="view_x_resultat_lab_search" model="ir.ui.view">
+        <field name="name">view.x_resultat_lab.search</field>
+        <field name="model">x_resultat_lab</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action x_resultat_lab -->
+    <record id="action_x_resultat_lab" model="ir.actions.act_window">
+        <field name="name">X_resultat_lab</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">x_resultat_lab</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new X_resultat_lab.
+            </p>
+        </field>
+    </record>
+
+</odoo>

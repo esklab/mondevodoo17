@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_school_student_manager,school_student_manager,model_school_student,base.group_user,1,1,1,1
+access_school_note_manager,school_note_manager,model_school_note,base.group_user,1,1,1,1
+access_school_matiere_manager,school_matiere_manager,model_school_matiere,base.group_user,1,1,1,1
+access_school_bulletin_manager,school_bulletin_manager,model_school_bulletin,base.group_user,1,1,1,1

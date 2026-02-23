@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="sequence_numero" model="ir.sequence">
+		   <field name="name">Numréo de projet</field>
+		   <field name="code">project_project</field>
+		   <field name="active">TRUE</field>
+		   <field name="prefix">Projet N°-</field>
+		   <field name="padding">3</field>
+		   <field name="number_next">1</field>
+		   <field name="number_increment">1</field>
+		</record>
+    </data>
+</odoo>

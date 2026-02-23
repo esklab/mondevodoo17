@@ -1,0 +1,20 @@
+<odoo>
+    <template id="survey_print_page_inherit" inherit_id="survey.survey_print_page">
+        <!-- Ici on ajoute une div après le contenu principal -->
+        <xpath expr="//div[@class='wrap']" position="after">
+            <div class="mt-5">
+                <h3>Boutiques POS associées</h3>
+                <ul>
+                    <t t-foreach="survey.pos_shop_ids" t-as="shop">
+                        <li>
+                            <span t-esc="shop.name"/>
+                        </li>
+                    </t>
+                    <t t-if="not survey.pos_shop_ids">
+                        <li>Aucune boutique POS liée</li>
+                    </t>
+                </ul>
+            </div>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_dynamic_field_mapping_tree" model="ir.ui.view">
+        <field name="name">dynamic.field.mapping.tree</field>
+        <field name="model">dynamic.field.mapping</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="mapping_model_from"/>
+                <field name="mapping_model_to"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_dynamic_field_mapping_form" model="ir.ui.view">
+        <field name="name">dynamic.field.mapping.form</field>
+        <field name="model">dynamic.field.mapping</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="mapping_model_from" required="1"/>
+                            <field name="mapping_model_to" required="1"/>
+                        </group>
+                    </group>
+                    <notebook name="Notebook">
+                        <page name="mapping_field_lines" string="Mapping Field Lines">
+                            <field name="line_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="mapping_model_from_field_selection_id"
+                                               domain="[('model', '=', parent.mapping_model_from)]"/>
+                                    <field name="mapping_model_to_field_selection_id"
+                                           domain="[('model', '=', parent.mapping_model_to)]"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="dynamic_field_mapping_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Field Mapping</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">dynamic.field.mapping</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_dynamic_field_mapping_main_menu"
+              name="Dynamic Field Mapping"
+              groups="dynamic_field_mapping.group_dynamic_field_mapping_access"
+              sequence="0"
+              web_icon="dynamic_field_mapping,static/description/mapping.png"/>
+
+    <menuitem id="menu_dynamic_field_mapping_sub_menu"
+              name="Dynamic Field Mapping"
+              parent="menu_dynamic_field_mapping_main_menu"
+              action="dynamic_field_mapping_action"
+              sequence="0"/>
+</odoo>

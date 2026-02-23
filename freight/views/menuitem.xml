@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Warehouse" parent="freight_root" id="freight_warehouse" sequence="3"/>
+        <menuitem
+            action="stock.stock_picking_type_action"
+            id="freight_stock_picking_type_menu"
+            parent="freight_warehouse" sequence="0"
+            name="Overview"/>
+        
+        <record id="product_template_action_product" model="ir.actions.act_window">
+            <field name="name">Warehouse Shipments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="stock.product_template_search_form_view_stock"/>
+            <field name="domain">[('shipment_ok', '=', True)]</field>
+            <field name="context">{'default_shipment_ok': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No product found. Let's create one!
+                </p><p>
+                    Track your stock quantities by creating storable warehouse shipments.
+                </p>
+            </field>
+        </record>
+        <menuitem id="freight_menu_product_variant_config_stock" name="Warehouse Shipments" action="product_template_action_product"
+        parent="freight_warehouse" sequence="1"/>
+
+        <menuitem name="Fleet" parent="freight_root" id="freight_fleet_vehicles" sequence="4" groups="fleet.fleet_group_user"/>
+        <menuitem action="fleet.fleet_vehicle_action" parent="freight_fleet_vehicles" name="Fleet"
+        id="freight_fleet_vehicle_menu" groups="fleet.fleet_group_user" sequence="0"/>
+        <menuitem action="fleet.fleet_vehicle_odometer_action" parent="freight_fleet_vehicles" id="freight_fleet_vehicle_odometer_menu" groups="fleet.fleet_group_user" sequence="10"/>
+        <menuitem action="fleet.fleet_vehicle_log_contract_action" parent="freight_fleet_vehicles" id="fleet_vehicle_log_contract_menu" groups="fleet.fleet_group_user" sequence="2"/>
+        <menuitem action="fleet.fleet_vehicle_log_services_action" parent="freight_fleet_vehicles" id="fleet_vehicle_log_services_menu" groups="fleet.fleet_group_user" sequence="3"/>
+
+        <menuitem name="Reporting" parent="freight_root" id="freight_reporting" sequence="5"/>
+
+
+        <record model="ir.actions.act_window" id="shipment_dashboard_open_quants"> <!-- Used in dashboard -->
+            <field name="name">Shipment Inventory Report</field>
+            <field name="context">{'search_default_internal_loc': 1, 'search_default_productgroup':1, 'search_default_locationgroup':1}</field>
+            <field name="res_model">stock.quant</field>
+            <field name="domain">[('product_id.shipment_ok', '=', True)]</field>
+        </record>
+
+
+        <record model="ir.actions.server" id="action_view_shipment_quants"> <!-- Menu + python -->
+            <field name="name">Shipment Inventory report</field>
+            <field name="model_id" ref="stock.model_stock_quant"/>
+            <field name="state">code</field>
+            <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
+            <field name="code">
+                action = model.with_context(
+                    search_default_internal_loc=1,
+                    search_default_productgroup=1,
+                    search_default_locationgroup=1,
+                ).action_view_shipment_quants()
+            </field>
+        </record>
+        <menuitem id="freight_menu_valuation" name="Shipment Inventory report" parent="freight_reporting" sequence="1" action="action_view_shipment_quants"/>
+
+        <record id="shipment_stock_move_action" model="ir.actions.act_window">
+            <field name="name">Shipment Stock Moves</field>
+            <field name="res_model">stock.move</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_id" ref="stock.view_move_tree"/>
+            <field name="search_view_id" ref="stock.view_move_search"/>
+            <field name="context">{'search_default_done': 1, 'search_default_groupby_location_id': 1}</field>
+            <field name="domain">[('product_id.shipment_ok', '=', True)]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No stock move found
+              </p><p>
+                This menu gives you the full traceability of inventory
+                operations on a specific product. You can filter on the product
+                to see all the past or future movements for the product.
+              </p>
+            </field>
+        </record>
+        <menuitem action="shipment_stock_move_action" name="Shipment Stock Moves" id="freight_stock_move_menu" parent="freight_reporting" sequence="2" groups="base.group_no_one"/>
+
+        <menuitem action="stock.action_warehouse_form" id="freight_menu_action_warehouse_form"
+            parent="freight.freight_configuration" sequence="1"/>
+    </data>
+</odoo>

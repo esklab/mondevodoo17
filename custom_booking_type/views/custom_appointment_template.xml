@@ -1,0 +1,41 @@
+<odoo>
+    <template id="custom_appointment_form_template" name="Custom Appointment Form">
+        <t t-call="website.layout">
+            <t t-set="title">Planifier un Rendez-vous</t>
+            <div class="container mt-5">
+                <h2>Prendre un rendez-vous</h2>
+                
+                <t t-if="request.params.get('success')">
+                    <p class="alert alert-success">Votre rendez-vous a été enregistré avec succès !</p>
+                </t>
+
+                <form action="/custom/appointment/submit" method="post">
+                    <div class="mb-3">
+                        <label for="appointmentType">Type de Rendez-vous</label>
+                        <select name="appointment_type_id" id="appointmentType" class="form-control">
+                            <t t-foreach="appointment_types" t-as="appointment">
+                                <option t-att-value="appointment.id" t-out="appointment.name"/>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="slot">Créneau</label>
+                        <select name="slot_id" id="slot" class="form-control">
+                            <option value="">Sélectionner un créneau</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="resource">Ressource</label>
+                        <select name="resource_id" id="resource" class="form-control">
+                            <option value="">Sélectionner une ressource</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Réserver</button>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

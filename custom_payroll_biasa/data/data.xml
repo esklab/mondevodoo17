@@ -1,0 +1,605 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Enregistrements pour les types d'agents -->
+        <record model="hr.type.agent" id="type_agent_execution">
+            <field name="name">Execution</field>
+        </record>
+        <record model="hr.type.agent" id="type_agent_maitrise">
+            <field name="name">Maitrise</field>
+        </record>
+        <record model="hr.type.agent" id="type_agent_cadre">
+            <field name="name">Cadre ou Assimilés</field>
+        </record>
+
+        <!-- Enregistrements pour les classes -->
+        <record model="hr.classe" id="classe_e1">
+            <field name="name">E1</field>
+        </record>
+        <record model="hr.classe" id="classe_e2">
+            <field name="name">E2</field>
+        </record>
+        <record model="hr.classe" id="classe_e3">
+            <field name="name">E3</field>
+        </record>
+        <record model="hr.classe" id="classe_e4">
+            <field name="name">E4</field>
+        </record>
+        <record model="hr.classe" id="classe_m1">
+            <field name="name">M1</field>
+        </record>
+        <record model="hr.classe" id="classe_m2">
+            <field name="name">M2</field>
+        </record>
+        <record model="hr.classe" id="classe_c1">
+            <field name="name">C1</field>
+        </record>
+        <record model="hr.classe" id="classe_c2">
+            <field name="name">C2</field>
+        </record>
+        <record model="hr.classe" id="classe_c3">
+            <field name="name">C3</field>
+        </record>
+        <record model="hr.classe" id="classe_c4">
+            <field name="name">C4</field>
+        </record>
+        <record model="hr.classe" id="classe_c5">
+            <field name="name">C5</field>
+        </record>
+        <record model="hr.classe" id="classe_c6">
+            <field name="name">C6</field>
+        </record>
+        <!-- Ajoutez des enregistrements pour d'autres classes -->
+
+        <!-- Enregistrements pour les échelons -->
+        <record model="hr.echelon" id="echelon_1">
+            <field name="name">1</field>
+        </record>
+        <record model="hr.echelon" id="echelon_2">
+            <field name="name">2</field>
+        </record>
+        <record model="hr.echelon" id="echelon_3">
+            <field name="name">3</field>
+        </record>
+        <record model="hr.echelon" id="echelon_4">
+            <field name="name">4</field>
+        </record>
+        <record model="hr.echelon" id="echelon_5">
+            <field name="name">5</field>
+        </record>
+        <record model="hr.echelon" id="echelon_6">
+            <field name="name">6</field>
+        </record>
+        <record model="hr.echelon" id="echelon_7">
+            <field name="name">7</field>
+        </record>
+        <record model="hr.echelon" id="echelon_8">
+            <field name="name">8</field>
+        </record>
+        <record model="hr.echelon" id="echelon_9">
+            <field name="name">9</field>
+        </record>
+        
+        <!-- Ajoutez des enregistrements pour d'autres échelons -->
+
+        <!-- Enregistrements pour les salaires Execution-->
+        <record model="hr.salary" id="salary_1">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e1"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">54000</field>
+        </record>
+        <record model="hr.salary" id="salary_2">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e1"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">57000</field>
+        </record>
+        <record model="hr.salary" id="salary_3">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e1"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">60000</field>
+        </record>
+        <record model="hr.salary" id="salary_4">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e1"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">63000</field>
+        </record>
+        <record model="hr.salary" id="salary_5">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e1"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">66000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_6">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e2"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">69000</field>
+        </record>
+        <record model="hr.salary" id="salary_7">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e2"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">72000</field>
+        </record>
+        <record model="hr.salary" id="salary_8">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e2"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">75000</field>
+        </record>
+        <record model="hr.salary" id="salary_9">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e2"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">78000</field>
+        </record>
+        <record model="hr.salary" id="salary_10">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e2"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">81000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_11">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e3"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">84000</field>
+        </record>
+        <record model="hr.salary" id="salary_12">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e3"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">87000</field>
+        </record>
+        <record model="hr.salary" id="salary_13">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e3"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">90000</field>
+        </record>
+        <record model="hr.salary" id="salary_14">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e3"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">93000</field>
+        </record>
+        <record model="hr.salary" id="salary_15">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e3"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">96000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_16">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e4"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">100000</field>
+        </record>
+        <record model="hr.salary" id="salary_17">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e4"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">103000</field>
+        </record>
+        <record model="hr.salary" id="salary_18">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e4"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">106000</field>
+        </record>
+        <record model="hr.salary" id="salary_19">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e4"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">109000</field>
+        </record>
+        <record model="hr.salary" id="salary_20">
+            <field name="type_agent_id" ref="type_agent_execution"/>
+            <field name="classe_id" ref="classe_e4"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">112000</field>
+        </record>
+
+        <!-- Ajoutez des enregistrements pour d'autres salaires Maitrise -->
+        <record model="hr.salary" id="salary_21">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m1"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">117000</field>
+        </record>
+        <record model="hr.salary" id="salary_22">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m1"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">121000</field>
+        </record>
+        <record model="hr.salary" id="salary_23">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m1"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">125000</field>
+        </record>
+        <record model="hr.salary" id="salary_24">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m1"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">129000</field>
+        </record>
+        <record model="hr.salary" id="salary_25">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m1"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">133000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_26">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m2"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">138000</field>
+        </record>
+        <record model="hr.salary" id="salary_27">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m2"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">142000</field>
+        </record>
+        <record model="hr.salary" id="salary_28">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m2"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">146000</field>
+        </record>
+        <record model="hr.salary" id="salary_29">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m2"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">150000</field>
+        </record>
+        <record model="hr.salary" id="salary_30">
+            <field name="type_agent_id" ref="type_agent_maitrise"/>
+            <field name="classe_id" ref="classe_m2"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">154000</field>
+        </record>
+
+        <!-- Enregistrements pour les salaires Execution-->
+        <record model="hr.salary" id="salary_31">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">159000</field>
+        </record>
+        <record model="hr.salary" id="salary_32">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">171000</field>
+        </record>
+        <record model="hr.salary" id="salary_33">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">183000</field>
+        </record>
+        <record model="hr.salary" id="salary_34">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">195000</field>
+        </record>
+        <record model="hr.salary" id="salary_35">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">207000</field>
+        </record>
+        <record model="hr.salary" id="salary_36">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">219000</field>
+        </record>
+        <record model="hr.salary" id="salary_37">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">231000</field>
+        </record>
+        <record model="hr.salary" id="salary_38">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">243000</field>
+        </record>
+        <record model="hr.salary" id="salary_39">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c1"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">255000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_40">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">265000</field>
+        </record>
+        <record model="hr.salary" id="salary_41">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">277000</field>
+        </record>
+        <record model="hr.salary" id="salary_42">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">289000</field>
+        </record>
+        <record model="hr.salary" id="salary_43">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">301000</field>
+        </record>
+        <record model="hr.salary" id="salary_44">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">313000</field>
+        </record>
+        <record model="hr.salary" id="salary_45">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">325000</field>
+        </record>
+        <record model="hr.salary" id="salary_46">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">337000</field>
+        </record>
+        <record model="hr.salary" id="salary_47">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">349000</field>
+        </record>
+        <record model="hr.salary" id="salary_48">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c2"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">361000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_49">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">371000</field>
+        </record>
+        <record model="hr.salary" id="salary_50">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">383000</field>
+        </record>
+        <record model="hr.salary" id="salary_51">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">395000</field>
+        </record>
+        <record model="hr.salary" id="salary_52">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">407000</field>
+        </record>
+        <record model="hr.salary" id="salary_53">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">419000</field>
+        </record>
+        <record model="hr.salary" id="salary_54">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">431000</field>
+        </record>
+        <record model="hr.salary" id="salary_55">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">443000</field>
+        </record>
+        <record model="hr.salary" id="salary_56">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">455000</field>
+        </record>
+        <record model="hr.salary" id="salary_57">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c3"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">467000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_58">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">482000</field>
+        </record>
+        <record model="hr.salary" id="salary_59">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">494000</field>
+        </record>
+        <record model="hr.salary" id="salary_60">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">506000</field>
+        </record>
+        <record model="hr.salary" id="salary_61">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">518000</field>
+        </record>
+        <record model="hr.salary" id="salary_62">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">530000</field>
+        </record>
+        <record model="hr.salary" id="salary_63">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">542000</field>
+        </record>
+        <record model="hr.salary" id="salary_64">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">554000</field>
+        </record>
+        <record model="hr.salary" id="salary_65">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">566000</field>
+        </record>
+        <record model="hr.salary" id="salary_66">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c4"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">578000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_67">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">598000</field>
+        </record>
+        <record model="hr.salary" id="salary_68">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">610000</field>
+        </record>
+        <record model="hr.salary" id="salary_69">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">622000</field>
+        </record>
+        <record model="hr.salary" id="salary_70">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">634000</field>
+        </record>
+        <record model="hr.salary" id="salary_71">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">646000</field>
+        </record>
+        <record model="hr.salary" id="salary_72">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">658000</field>
+        </record>
+        <record model="hr.salary" id="salary_73">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">670000</field>
+        </record>
+        <record model="hr.salary" id="salary_74">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">682000</field>
+        </record>
+        <record model="hr.salary" id="salary_75">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c5"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">694000</field>
+        </record>
+
+        <record model="hr.salary" id="salary_76">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_1"/>
+            <field name="montant">714000</field>
+        </record>
+        <record model="hr.salary" id="salary_77">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_2"/>
+            <field name="montant">726000</field>
+        </record>
+        <record model="hr.salary" id="salary_78">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_3"/>
+            <field name="montant">738000</field>
+        </record>
+        <record model="hr.salary" id="salary_79">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_4"/>
+            <field name="montant">750000</field>
+        </record>
+        <record model="hr.salary" id="salary_80">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_5"/>
+            <field name="montant">762000</field>
+        </record>
+        <record model="hr.salary" id="salary_81">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_6"/>
+            <field name="montant">774000</field>
+        </record>
+        <record model="hr.salary" id="salary_82">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_7"/>
+            <field name="montant">786000</field>
+        </record>
+        <record model="hr.salary" id="salary_83">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_8"/>
+            <field name="montant">798000</field>
+        </record>
+        <record model="hr.salary" id="salary_84">
+            <field name="type_agent_id" ref="type_agent_cadre"/>
+            <field name="classe_id" ref="classe_c6"/>
+            <field name="echelon_id" ref="echelon_9"/>
+            <field name="montant">810000</field>
+        </record>
+
+    </data>
+</odoo>

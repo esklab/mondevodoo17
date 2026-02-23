@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_personne_acharge,access.hr.personne.acharge,model_hr_personne_acharge,base.group_user,1,1,1,1
+access_print_paieannuel_report,access.print.paieannuel.report,model_print_paieannuel_report,base.group_user,1,1,1,1
+access_print_payrollpdf_report,access.print.payrollpdf.report,model_print_payrollpdf_report,base.group_user,1,1,1,1
+access_payroll_report_wiz,access.payroll.report.wiz,model_payroll_report_wiz,base.group_user,1,1,1,1
+access_payroll_report_excel,access.payroll.report.excel,model_payroll_report_excel,base.group_user,1,1,1,1

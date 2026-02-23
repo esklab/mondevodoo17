@@ -1,0 +1,158 @@
+<odoo>
+    <!-- Définition du format de papier en paysage -->
+    <record id="paperformat_landscape" model="report.paperformat">
+        <field name="name">A4 Landscape</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">20</field>  <!-- Augmenté pour l'en-tête -->
+        <field name="margin_bottom">20</field>  <!-- Augmenté pour le pied de page -->
+        <field name="margin_left">10</field>
+        <field name="margin_right">10</field>
+        <field name="header_spacing">10</field>  <!-- Espacement de l'en-tête -->
+        <field name="dpi">90</field>  <!-- Résolution pour un meilleur rendu -->
+    </record>
+
+    <!-- Définition de l'action de rapport -->
+    <record id="report_stock_report_wizard" model="ir.actions.report">
+        <field name="name">Stock Report Wizard</field>
+        <field name="model">stock.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_report.report_stock_report_wizard_view</field>
+        <field name="report_file">stock_report.report_stock_report_wizard</field>
+        <field name="print_report_name">'Rapport de stock'</field>
+        <field name="binding_model_id" ref="model_stock_report_wizard"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_landscape"/>  <!-- Utilisation du format paysage -->
+    </record>
+
+    <!-- Définition du template pour le rapport -->
+    <template id="report_stock_report_wizard_view">
+        <t t-call="web.internal_layout">
+            <t t-set="doc" t-value="docs"/>
+            
+            <t t-set="css">
+                <style>
+                    @page {
+                        size: A4 landscape;
+                    }
+                    .info-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                    }
+                    .info-box {
+                        flex: 0 0 48%;
+                        margin-bottom: 10px;
+                    }
+                    .table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    .table th {
+                        background-color: #f2f2f2;
+                        text-align: left;
+                        padding: 8px;
+                        border: 1px solid #ddd;
+                    }
+                    .table td {
+                        padding: 8px;
+                        border: 1px solid #ddd;
+                    }
+                    .text-right {
+                        text-align: right;
+                    }
+                    h2 {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                </style>
+            </t>
+
+            <main> 
+                <div class="page">
+                    <!-- Affichage des informations de l'emplacement et de la catégorie -->
+                    <div style="width: 100%; overflow: hidden; margin-top: 20px; margin-bottom: 20px;">
+                        <h3>Rapport de Stock</h3>
+                        <!-- Première colonne -->
+                        <div style="width: 48%; float: left; margin-right: 2%;">
+                            <p style="margin: 5px 0;"><strong>Emplacement(s):</strong> 
+                                <t t-esc="', '.join([loc.complete_name for loc in doc.location_ids]) or 'Tous les emplacements'"/>
+                            </p>
+                            <p style="margin: 5px 0;"><strong>Catégorie(s):</strong> 
+                                <t t-esc="', '.join([cat.complete_name for cat in doc.category_ids]) or 'Toutes les catégories'"/>
+                            </p>
+                            <p style="margin: 5px 0;"><strong>Marque(s):</strong> 
+                                <t t-esc="', '.join([brand.x_name for brand in doc.brand_ids]) or 'Toutes les Marques'"/>
+                            </p>
+                        </div>
+                        
+                        <!-- Deuxième colonne -->
+                        <div style="width: 48%; float: left; margin-left: 2%;">
+                            <p style="margin: 5px 0;"><strong>Période:</strong> 
+                                <t t-if="doc.date_start or doc.date_end">
+                                    Du <span t-field="doc.date_start" t-options='{"widget": "date"}'/> 
+                                    au <span t-field="doc.date_end" t-options='{"widget": "date"}'/>
+                                </t>
+                                <t t-else="">Toutes les dates</t>
+                            </p>
+                            <p style="margin: 5px 0;"><strong>Date de génération:</strong> 
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y %H:%M')"/>
+                            </p>
+                        </div>
+                        
+                        <!-- Clearfix -->
+                        <div style="clear: both;"></div>
+                    </div>
+                    
+                    <!-- Table des produits -->
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Emplacement</th>
+                                <th>Catégorie</th>
+                                <!-- <th>Marque</th> -->
+                                <th>Produit</th>
+                                <th>Prix</th>
+                                <th>Stock initial</th>
+                                <th>Quantité recue</th>
+                                <th>Quantité vendue</th>
+                                <th>Stock final</th>
+                                <th>Quantité en stock</th>
+                                <th>Montant total des ventes</th>
+                                <th>Fournisseur</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Regrouper par emplacement et catégorie -->
+                            <t t-foreach="doc.location_ids" t-as="location">
+                                <t t-foreach="doc.category_ids" t-as="category">
+                                    <t t-set="filtered_products" t-value="doc.product_ids.filtered(lambda p: location in p.stock_quant_ids.mapped('location_id') and category in p.categ_id)"/>
+                                    
+                                    <!-- Affichage des produits filtrés pour chaque emplacement et catégorie -->
+                                    <t t-foreach="filtered_products" t-as="product">
+                                        <tr>
+                                            <td><t t-esc="location.name"/></td>
+                                            <td><t t-esc="category.name"/></td>
+                                            <!-- <td><t t-esc="product.x_studio_many2one_field_pw8Es.x_name"/></td> -->
+                                            <td><t t-esc="product.name"/></td>
+                                            <td><t t-esc="product.list_price"/></td>
+                                            <td><t t-esc="doc._get_stock_qty(product)"/></td> <!-- Stock Initial -->
+                                            <td><t t-esc="doc._get_received_qty(product)"/></td> <!-- Stock Recues -->
+                                            <td><t t-esc="doc._get_sold_qty_and_sales(product)[0]"/></td> <!-- Stock vendues -->
+                                            <td><t t-esc="doc._get_stock_qty_end(product)"/></td><!-- Stock final -->
+                                            <td t-esc="product.qty_available"/><!-- Quantite en stock -->
+                                            <td><t t-esc="doc._get_sold_qty_and_sales(product)[1]"/></td> <!-- Montant total vendues -->
+                                            <td><t t-esc="product.seller_ids and product.seller_ids[0].partner_id.name or 'Aucun fournisseur trouvé'"/></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </t>
+    </template>
+</odoo>

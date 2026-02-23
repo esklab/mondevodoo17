@@ -1,0 +1,26 @@
+<odoo>
+    <report
+    id="report_employe"
+    string="Rapport Employé"
+    model="module.employe"
+    report_type="qweb-pdf"
+    file="module.report_employe_template"
+    name="module.report_employe_template"
+    />
+
+    <template id="report_employe_template">
+        <t t-call="web.basic_layout">
+            <t t-name="web.basic_layout">
+                <div class="page">
+                    <h2>Informations sur l'Employé</h2>
+                    <h2>Contrat de Travail</h2>
+                    <p>Je soussigné 
+                        <span t-field="o.name"/> 
+                        <span t-field="o.prenom"/>, occupant le poste de 
+                        <span t-field="o.poste"/>, ayant un salaire de 
+                        <span t-field="o.salaire"/> travail à Maono.</p>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

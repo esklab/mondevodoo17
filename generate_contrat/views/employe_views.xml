@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record model="ir.ui.view" id="view_moduleemploye_tree">
+        <field name="name">module.employe.tree</field>
+        <field name="model">module.employe</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nom"/>
+                <field name="prenom"/>
+                <field name="poste"/>
+                <field name="salaire"/>                    
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_recform_form">
+        <field name="name">module.employe.form</field>
+        <field name="model">module.employe</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="nom"/>
+                    <field name="prenom"/>
+                    <field name="poste"/>
+                    <field name="salaire"/>
+                </group>
+                <footer>
+                    <button string="Générer Rapport" type="object" class="oe_highlight" name="generate_report" help="Générer un rapport PDF avec les informations de l'employé"/>
+                    <button string="Annuler" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_contrat">
+        <field name="name">Generate Contract</field>
+        <field name="res_model">module.employe</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_contrat" name="contrat" sequence="10"/>
+    <menuitem id="menu_contrat_list" name="Contract" parent="menu_contrat" action="action_contrat"/>
+
+</odoo>

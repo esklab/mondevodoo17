@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="payroll_pdf_view_report" model="ir.actions.report">
+        <field name="name">Livre de paie</field>
+        <field name="model">print.payrollpdf.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">th_custum_payroll.th_paie_pdf_report_view</field>
+        <field name="report_file">th_custum_payroll.th_paie_pdf_report_view</field>
+        <field name="paperformat_id" ref="paperformat_bulletin_paie"/>
+    </record>
+
+		<template id="th_paie_pdf_report_view">
+			<t t-call="web.html_container">
+				<t t-call="web.basic_layout">
+					<style type="text/css">
+				html{
+				/*font-family: Century Gothic;*/
+				}
+              .MyTable {
+                 border-collapse:collapse;
+                 border:1px solid black;
+                 width: 100%;
+                 font-family:'Arial Narrow' font-size:16;
+                }
+              .sparator{
+                color:white;
+              }
+              .MyTable td {
+                 border:1px solid black;
+                 border-bottom : 0px;
+                 border-top: 0px;
+                 margin-left: 150px;
+                 font-family:'Arial Narrow'; font-size:15;
+               }
+               .MyTable tr{
+                border-bottom : 0px;
+                 border-top: 0px;
+                 font-family:'Arial Narrow'; font-size:15;
+               }
+               .MyTable th{
+                border:1px solid black;
+                font-family:'Arial Narrow'; font-size:15;
+               }
+               .entete {
+                 text-align: center;
+                 font-family:'Arial Narrow'; font-size:15;
+               }
+               .img{
+                  width: 200px;
+                  height: 150px;
+                  font-family:'Arial Narrow'; font-size:15;
+                 }
+              .montant{
+                text-align: right;
+                font-family:'Arial Narrow'; font-size:15;
+				padding-right:5px;
+              }
+              .company{
+                font-size: 22px;
+                font-weight: bold;
+                font-family:'Arial Narrow'; font-size:15;
+              }
+             
+             .rubrique{
+              font-size: 20;
+              font-family:'Arial Narrow'; font-size:15;
+             }
+             .montant-total{
+               font-weight: bold;
+               font-family:'Arial Narrow'; font-size:15;
+             }
+            </style>
+					<t t-set="page" t-value="1"/>
+					<t t-foreach="toute_les_liste_a_traiter" t-as="employee_groupe">
+						<div class="page page_font">
+							<table class="MyTable entete">
+								<tr>
+									<td width="45%">
+									<img t-if="compayinfo['logo']" t-attf-src="data:image/*;base64,{{compayinfo['logo']}}" style="width: 200px;"/>
+									</td>
+									<td><h3 style="color : rgb(31,62,124);">LIVRE MENSUEL DE PAIE</h3>
+									<p><span  class="company" t-esc="compayinfo['company_name']"/><br/>
+									<span t-esc="compayinfo['street']"/><br/>
+									<span t-esc="compayinfo['zip']"/> <span t-esc="compayinfo['city']"/> -<span t-esc="compayinfo['country']"/><br/>
+									Tel : <span t-esc="compayinfo['phone']"/> / E-mail : <span t-esc="compayinfo['email']"/><br/>
+									</p>
+									</td>
+								</tr>
+							</table>
+							<h4 class="text-center">PAIE DU MOIS DE <t t-esc="employee_groupe[0]['date_from'].upper()" /></h4>
+							<table class="MyTable">
+								<tr>
+									<th width="25%">Rubriques</th>
+									<t t-foreach="employee_groupe" t-as="head_employee">
+										<th width="11%"><t t-esc="head_employee['employee_name']" /></th>
+									</t>
+								</tr>
+								<tr>
+									<th style="test-align:left">Matricule</th>
+									<t t-foreach="employee_groupe" t-as="head_employee">
+										<th><t t-esc="head_employee['matricule']" /></th>
+									</t>
+								</tr>
+								<t t-foreach="heads" t-as="head">
+									<tr>
+										<t t-if="head[0] == 'Total brut' or head[0] == 'Total cotisation' or head[0] == 'Salaire Net'">
+											<th><t t-esc="head[0]" /></th>
+										</t>
+										<t t-if="head[0] != 'Total brut' and head[0] != 'Total cotisation' and head[0] != 'Salaire Net'">
+											<td><t t-esc="head[0]" /></td>
+										</t>
+										<t t-foreach="employee_groupe" t-as="employee_en_cour">
+											<t t-set="compteur" t-value="0"/>
+											<t t-foreach="employee_en_cour['lines']" t-as="line">
+												<t t-if="line['code'] == head[1]">
+													<t t-if="head[0] == 'Total brut' or head[0] == 'Total cotisation' or head[0] == 'Salaire Net'">
+														<th class="montant"><t t-esc="'{:,}'.format(round(line['total'])).replace(',', ' ')"/> </th>
+													</t>
+													<t t-if="head[0] != 'Total brut' and head[0] != 'Total cotisation' and head[0] != 'Salaire Net'">
+														<td class="montant"><t t-esc="'{:,}'.format(round(line['total'])).replace(',', ' ')"/> </td>
+													</t>
+													<t t-set="compteur" t-value="compteur + 1"/>
+												</t>
+											</t>
+											<t t-if="compteur == 0">
+												<td class="text-right">0</td>
+											</t>
+										</t>
+									</tr>
+								</t>
+								<tr>
+									<th>Nombre d'employés</th>
+									<t t-foreach="range(len(employee_groupe))" t-as="emp">
+										<th>
+											<t t-if="employee_groupe_last and emp_last">
+												<t t-esc="nombre_employee"/>
+											</t>
+										</th>
+									</t>
+								</tr>
+							</table>
+							<div class="text-right">
+								<span>Page </span><span class="page" t-esc="page" /> sur <span class="topage" t-esc="len(toute_les_liste_a_traiter)" />
+							</div>
+							<t t-set="page" t-value="page + 1"/>
+							<p style="page-break-before:always;"></p>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</odoo>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Schedule Day Data -->
+            <record id="schedule_day_monday" model="my.schedule.day">
+                <field name="name">Lundi</field>
+            </record>
+            <record id="schedule_day_tuesday" model="my.schedule.day">
+                <field name="name">Mardi</field>
+            </record>
+            <record id="schedule_day_wednesday" model="my.schedule.day">
+                <field name="name">Mercredi</field>
+            </record>
+            <record id="schedule_day_thursday" model="my.schedule.day">
+                <field name="name">Jeudi</field>
+            </record>
+            <record id="schedule_day_friday" model="my.schedule.day">
+                <field name="name">Vendredi</field>
+            </record>
+            <record id="schedule_day_saturday" model="my.schedule.day">
+                <field name="name">Samedi</field>
+            </record>
+            <record id="schedule_day_sunday" model="my.schedule.day">
+                <field name="name">Dimanche</field>
+            </record>
+</odoo>

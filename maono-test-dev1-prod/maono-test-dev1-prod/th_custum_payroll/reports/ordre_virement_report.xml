@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="order_virement_report_view" model="ir.actions.report">
+        <field name="name">Ordre de virement</field>
+        <field name="model">hr.virement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">th_custum_payroll.order_virement_report</field>
+        <field name="report_file">th_custum_payroll.order_virement_report</field>
+        <field name="paperformat_id" ref="paperformat_bulletin_paie"/>
+    </record>
+    
+    <template id="order_virement_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <p style="font-size:20px;">Messieurs,</p>
+                    <p style="font-size:20px;">Par ce présent chèque <t t-esc="o.check_number"/>, nous vous prions de bien vouloir virer dans les meilleurs délais, les montant ci-dessous(en FCFA) au crédit des comptes ouverts chez vous à <t t-esc="o.bank_id.name"/></p>
+                    <table class="table table-sm">
+                        <thead>
+                            <th>N° MATR</th>
+                            <th>NOM ET PRENOM</th>
+                            <th>BANQUE ET NUMERO DE COMPMTE</th>
+                            <th>NET A PAYER</th>
+                        </thead>
+                        <tbody>
+                            <t t-set="total_amount" t-value="0"/>
+                                <t t-foreach="o.payslip_ids" t-as="payslip_id">
+                                    <tr>
+                                        <td><t t-esc="payslip_id.employee_id.matricule"/></td>
+                                        <td><t t-esc="payslip_id.employee_id.name"/></td>
+                                        <td>
+                                            <span t-esc="payslip_id.employee_id.banque_id.name"/>
+                                            <span style="color:white;">------------------</span>
+                                            <span  t-esc="payslip_id.employee_id.account_number"/>
+                                        </td>
+                                        <td style="text-align:right;"><t t-esc="'{:,}'.format(round(payslip_id.net_wage)).replace(',',' ')"/></td>
+                                        <t t-set="total_amount" t-value="total_amount + payslip_id.net_wage"/>
+                                    </tr>
+                                </t>
+                            <tr>
+                                <td colspan="3">Total</td>
+                                <td><t t-esc="'{:,}'.format(round(total_amount)).replace(',',' ')"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                   <p style="font-size:20px;">Nouv vous en remercions à l'avance</p>
+                   <p style="font-size:20px;">Veuilez agréer Messieurs, nos salutations distinguées</p>
+                   <p style="font-size:20px;">Pour la RAMCO S.A IMPORT-EXPORT</p>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

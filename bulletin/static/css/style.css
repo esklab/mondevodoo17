@@ -1,0 +1,11 @@
+.badge.color-red {
+    background-color: #FF0000 !important;
+}
+
+.badge.color-orange {
+    background-color: #FFA500 !important;
+}
+
+.badge.color-green {
+    background-color: #008000 !important;
+}

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record model="ir.ui.view" id="view_recform_tree">
+        <field name="name">rec.form.tree</field>
+        <field name="model">rec.form</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/> 
+                <field name="email"/> 
+                <field name="phone"/>   
+                <field name="message"/>                    
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_recform_form">
+        <field name="name">rec.form.form</field>
+        <field name="model">rec.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/> 
+                    <field name="email"/> 
+                    <field name="phone"/>   
+                    <field name="message"/>       
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_recform">
+        <field name="name">Rec Form</field>
+        <field name="res_model">rec.form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_recform" name="recform" sequence="10"/>
+    <menuitem id="menu_recform_list" name="Rec Form" parent="menu_recform" action="action_recform"/>
+</odoo>

@@ -1,0 +1,8 @@
+<template id="thank_you_page" name="Page de Remerciement">
+    <t t-call="website.layout">
+        <div class="container">
+            <h1>Merci pour votre réservation</h1>
+            <p>Nous avons bien reçu votre demande de réservation et vous contacterons sous peu.</p>
+        </div>
+    </t>
+</template>

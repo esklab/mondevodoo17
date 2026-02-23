@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue formulaire -->
+    <record id="view_dock_transport_zone_form" model="ir.ui.view">
+        <field name="name">dock.transport.zone.form</field>
+        <field name="model">dock.transport.zone</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_activate"
+                            string="Activer"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state == 'active'"/>
+                    <button name="action_deactivate"
+                            string="Désactiver"
+                            type="object"
+                            invisible="state == 'inactive'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Nom de la zone"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="sequence"/>
+                            <field name="distance"/>
+                        </group>
+                        <group>
+                            <field name="base_price"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <!-- <page string="Villes">
+                            <field name="city_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="state_id"/>
+                                    <field name="country_id"/>
+                                </tree>
+                            </field>
+                        </page> -->
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue liste -->
+    <record id="view_dock_transport_zone_tree" model="ir.ui.view">
+        <field name="name">dock.transport.zone.tree</field>
+        <field name="model">dock.transport.zone</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="distance"/>
+                <field name="base_price"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vue recherche -->
+    <record id="view_dock_transport_zone_search" model="ir.ui.view">
+        <field name="name">dock.transport.zone.search</field>
+        <field name="model">dock.transport.zone</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="code"/>
+                <filter string="Actives" name="active" domain="[('state', '=', 'active')]"/>
+                <filter string="Brouillon" name="draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="Inactives" name="inactive" domain="[('state', '=', 'inactive')]"/>
+                <separator/>
+                <filter string="Archivé" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Regrouper par">
+                    <filter string="État" name="state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_dock_transport_zone" model="ir.actions.act_window">
+        <field name="name">Zones de Transport</field>
+        <field name="res_model">dock.transport.zone</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_dock_transport_zone_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Créez votre première zone de transport !
+            </p>
+        </field>
+    </record>
+
+</odoo>

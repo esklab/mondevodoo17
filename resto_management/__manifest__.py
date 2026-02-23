@@ -1,0 +1,25 @@
+{
+    'name': 'Resto Management',
+    'version': '2.0',
+    'description': 'Resto Management',
+    'summary': 'Resto Management',
+    'author': 'maono',
+    'license': 'LGPL-3',
+    'category': 'Tools',
+    'depends': [
+        'base',
+        'account',
+        'sale_management',
+        'pos_restaurant',
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/product_template_views.xml",
+        "views/resto_table_views.xml",
+        "views/resto_menu_views.xml",
+        "views/resto_order_views.xml",
+        "views/pos_order_views.xml",
+    ],
+    'auto_install': False,
+    'application': True,
+}

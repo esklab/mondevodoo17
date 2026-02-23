@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_workflow_trash_tree" model="ir.ui.view">
+        <field name="name">workflow.trash.tree</field>
+        <field name="model">workflow.trash</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="state"/>
+                <field name="requested_by"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_workflow_trash_form" model="ir.ui.view">
+        <field name="name">workflow.trash.form</field>
+        <field name="model">workflow.trash</field>
+        <field name="arch" type="xml">
+            <form string="Corbeille des Validations">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="state"/>
+                        <field name="requested_by"/>
+                    </group>
+                    <group>
+                        <field name="create_date"/>
+                    </group>
+                    <button name="action_view_record" string="Voir l'enregistrement" type="object" class="oe_highlight"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action pour Workflow Trash -->
+    <record id="action_workflow_trash" model="ir.actions.act_window">
+        <field name="name">Corbeille des Validations</field>
+        <field name="res_model">workflow.trash</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

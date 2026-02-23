@@ -1,0 +1,27 @@
+<odoo>
+    <!-- Catégorie spécifique pour le module gestion des prix -->
+    <record id="dock_price_category" model="ir.module.category">
+        <field name="name">Gestion des Prix</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <!-- Groupe : Utilisateur (lecture uniquement) -->
+    <record id="group_dock_price_user" model="res.groups">
+        <field name="name">Utilisateur Prix (Lecture Seule)</field>
+        <field name="category_id" ref="dock_price_category"/>
+    </record>
+
+    <!-- Groupe : Gestionnaire des Prix (lecture, écriture, création, suppression) -->
+    <record id="group_dock_price_manager" model="res.groups">
+        <field name="name">Gestionnaire des Prix</field>
+        <field name="category_id" ref="dock_price_category"/>
+        <field name="implied_ids" eval="[(4, ref('group_dock_price_user'))]"/>
+    </record>
+
+    <!-- Groupe : Administrateur Prix -->
+    <record id="group_dock_price_admin" model="res.groups">
+        <field name="name">Administrateur Prix</field>
+        <field name="category_id" ref="dock_price_category"/>
+        <field name="implied_ids" eval="[(4, ref('group_dock_price_manager'))]"/>
+    </record>
+</odoo>

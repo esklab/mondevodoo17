@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_type_agent,hr_type_agent,model_hr_type_agent,base.group_user,1,1,1,1
+access_hr_classe_manager,hr_classe_manager,model_hr_classe,base.group_user,1,1,1,1
+access_hr_echelon_manager,hr_echelon_manager,model_hr_echelon,base.group_user,1,1,1,1
+access_hr_salary_manager,hr_salary_manager,model_hr_salary,base.group_user,1,1,1,1

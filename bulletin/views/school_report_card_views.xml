@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View school.bulletin View Tree -->
+    <record id="view_school_report_card_tree" model="ir.ui.view">
+        <field name="name">view.school.bulletin.tree</field>
+        <field name="model">school.bulletin</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_id"/>
+                <field name="total_score"/>
+                <field name="grade_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View school.bulletin form -->
+    <record id="view_school_report_card_form" model="ir.ui.view">
+        <field name="name">view.school.bulletin.form</field>
+        <field name="model">school.bulletin</field>
+        <field name="arch" type="xml">
+            <form string="School Report Card">
+                <sheet>
+                    <group>
+                        <field name="student_id"/>
+                        <field name="total_score"/>
+                        <field name="grade_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action school.bulletin -->
+    <record id="action_school_report_card" model="ir.actions.act_window">
+        <field name="name">School Report Card</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.bulletin</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="school_report_menu"
+        name="School Report"
+        action="action_school_report_card"
+        parent="student_school_menu"
+        sequence="100"/>
+
+</odoo>

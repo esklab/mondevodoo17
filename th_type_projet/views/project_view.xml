@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="type_projet_menu_action" model="ir.actions.act_window"> 
+        <field name="name">Type de projet</field>
+        <field name="res_model">type.projet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                VIDE
+            </p>
+        </field>
+    </record>
+
+    <record id="type_phase_menu_action" model="ir.actions.act_window"> 
+        <field name="name">Type de phase</field>
+        <field name="res_model">stage.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                VIDE
+            </p>
+        </field>
+    </record>
+
+    <record id="type_tache_menu_action" model="ir.actions.act_window"> 
+        <field name="name">Type de tâche</field>
+        <field name="res_model">task.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                VIDE
+            </p>
+        </field>
+    </record>
+
+    <record id="project_project_form" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[1]" position="after">                
+                <div class="oe_title">
+                    <label for="type_projet_id" string="Type de projet"/>
+                    <h3>
+                        <field name="type_projet_id" placeholder="Type de projet"/>  
+                    </h3>
+                </div>  
+                <div class="oe_title">
+                    <label for="date_start" string="Date" 
+                    required="1"
+                    />
+                    <h3>
+                        <field name="date_start" placeholder="Date de début"/>  
+                    </h3>
+                </div>      
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_project_2_form" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[1]" position="after">                
+                <div class="oe_title">
+                    <h1>
+                        <field name="numero" placeholder="Numéro de projet"/>  
+                    </h1>
+                </div>      
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="before">
+                <field name="cout"/>
+            </xpath>
+            <xpath expr="//field[@name='label_tasks']" position="before">
+                <field name="type_projet_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stage_type_view_form" model="ir.ui.view">
+        <field name="name">stage.type.view.form</field>
+        <field name="model">stage.type</field>
+        <field name="arch" type="xml">
+            <form string="Type de phase">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="task_type_form" model="ir.ui.view">
+        <field name="name">task.type.form</field>
+        <field name="model">task.type</field>
+        <field name="arch" type="xml">
+            <form string="Type de tache">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="type_projet_line_form" model="ir.ui.view">
+        <field name="name">type.projet.line.form</field>
+        <field name="model">type.projet.line</field>
+        <field name="arch" type="xml">
+            <form string="Type de ligne projet">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="phase_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="task" string="Tâches">
+                            <field name="task_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="type_projet_line_task_form" model="ir.ui.view">
+        <field name="name">type.projet.line.task.form</field>
+        <field name="model">type.projet.line.task</field>
+        <field name="arch" type="xml">
+            <form string="Ligne de tâche">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="type_id"/>                            
+                        </group>
+                        <group>
+                            <field name="type_dure"/>
+                            <field name="nbr_jour_heure"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="type_projet_form" model="ir.ui.view">
+        <field name="name">type.projet.form</field>
+        <field name="model">type.projet</field>
+        <field name="arch" type="xml">
+            <form string="Type de projet">
+                <sheet>
+                    <group>
+                        <field name="name"/>                  
+                    </group>
+                    <notebook>
+                        <page name="type_projet" string="Linge">
+                            <field name="state_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem
+        id="gestion_menu"
+        name="Type de projet"
+        parent="project.menu_project_config"
+        sequence="0"/>
+
+    <menuitem
+        id="type_projet_menu"
+        name="Modèle de projet"
+        parent="gestion_menu"
+        action="type_projet_menu_action"
+        sequence="5"/>
+
+    <menuitem
+        id="type_projet_phase_menu"
+        name="Type de phase"
+        action="type_phase_menu_action"
+        parent="gestion_menu"
+        sequence="15"/>
+
+    <menuitem
+        id="type_projet_tache_menu"
+        name="Type de tâche"
+        action="type_tache_menu_action"
+        parent="gestion_menu"
+        sequence="25"/>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resto.menu View tree -->
+    <record id="view_resto_menu_tree" model="ir.ui.view">
+        <field name="name">view.resto.menu.tree</field>
+        <field name="model">resto.menu</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View resto.menu form -->
+    <record id="view_resto_menu_form" model="ir.ui.view">
+        <field name="name">view.resto.menu.form</field>
+        <field name="model">resto.menu</field>
+        <field name="arch" type="xml">
+            <form string="Restaurant Menu">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="category"/>
+                        <field name="price"/>
+                        <field name="description"/>
+                        <field name="product_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View resto.menu search -->
+    <record id="view_resto_menu_search" model="ir.ui.view">
+        <field name="name">view.resto.menu.search</field>
+        <field name="model">resto.menu</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action resto.menu -->
+    <record id="action_resto_menu" model="ir.actions.act_window">
+        <field name="name">Resto Menu</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resto.menu</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Resto Menu.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu principal Restaurant -->
+    <menuitem id="menu_restaurant_menu" name="Menus" parent="menu_restaurant" action="action_resto_menu" />
+
+</odoo>

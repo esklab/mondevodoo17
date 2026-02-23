@@ -1,0 +1,38 @@
+<!-- <template id="room_booking_template" name="Formulaire de Réservation">
+    <t t-call="website.layout">
+        <div class="container">
+            <h1>Formulaire de Réservation</h1>
+            <form action="/room/booking/submit" method="post">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" name="phone" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="checkin_date">Date d'arrivée</label>
+                    <input type="date" name="checkin_date" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="checkout_date">Date de départ</label>
+                    <input type="date" name="checkout_date" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="room_ids">Chambres</label>
+                    <select name="room_ids" multiple="multiple" class="form-control">
+                        <t t-foreach="rooms" t-as="room">
+                            <option t-att-value="room.id"><t t-esc="room.name"/></option>
+                        </t>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Réserver</button>
+            </form>
+        </div>
+    </t>
+</template> -->

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="dnr_perio_menu_action" model="ir.actions.act_window">
+        <field name="name">Période DNR</field>
+        <field name="res_model">dnr.periode</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                Pas encore d'enregistrement
+            </p>
+        </field>
+    </record>
+    <record id="dnr_periode_form" model="ir.ui.view">
+        <field name="name">dnr.periode.form</field>
+        <field name="model">dnr.periode</field>
+        <field name="arch" type="xml">
+            <form string="Période DNR">
+                <sheet>
+                <group>
+                   <group>
+                        <field name="name" />
+                    </group>
+                     <group>
+                        <field name="mois_ids" widget='many2many_tags'/>
+                    </group>
+                </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <data>
+		<record id="dnr_mois_menu_action" model="ir.actions.act_window">
+			<field name="name">Mois</field>
+			<field name="res_model">dnr.mois</field>
+			<field name="view_mode">tree,form,kanban</field>
+			<field name="domain">[]</field>
+			<field name="help" type="html">
+				<p class="oe_view_noconten_create">
+					Pas encore d'enregistrement
+				</p>
+			</field>
+		</record>
+	</data>
+    <record id="dnr_mois_tree" model="ir.ui.view">
+        <field name="name">dnr.mois.tree</field>
+        <field name="model">dnr.mois</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="mois" />
+                <field name="date_debut" />
+                <field name="date_fin" />
+                <field name="nom_jours" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="paie_analyse_menu_action" model="ir.actions.act_window">
+        <field name="name">Analyse des paie</field>
+        <field name="res_model">hr.payslip.line</field>
+        <field name="view_mode">pivot,tree,form,kanban</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                Pas encore d'enregistrement
+            </p>
+        </field>
+    </record>
+
+    <record id="payroll_view_maroc_pivot" model="ir.ui.view">
+        <field name="name">payroll.view.maroc.pivot</field>
+        <field name="model">hr.payslip.line</field>
+        <field name="arch" type="xml">
+            <pivot string="">
+                <field name="name" type="row"/>
+                <field name="employee_id" type="col"/>
+                <field name="total" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+    <!-- <menuitem
+        id="dnr_periode_menu"
+        name="Période DNR"
+        action="dnr_perio_menu_action"
+        parent="hr_payroll.menu_hr_payroll_configuration"
+        sequence="100"/>
+    <menuitem
+        id="dnr_mois_menu"
+        name="Mois DNR"
+        action="dnr_mois_menu_action"
+        parent="hr_payroll.menu_hr_payroll_configuration"
+        sequence="100"/> -->
+    <menuitem
+        id="analyse_paie_report"
+        name="Analyse de paie"
+        action="paie_analyse_menu_action"
+        parent="menu_rapport_payroll_pdf_report"
+        sequence="100"/>
+</odoo>

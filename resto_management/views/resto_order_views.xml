@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resto.order View tree -->
+    <record id="view_resto_order_tree" model="ir.ui.view">
+        <field name="name">view.resto.order.tree</field>
+        <field name="model">resto.order</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="table_id"/>
+                <field name="state"/>
+                <field name="total_amount"/>
+                <field name="order_line_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View resto.order form -->
+    <record id="view_resto_order_form" model="ir.ui.view">
+        <field name="name">view.resto.order.form</field>
+        <field name="model">resto.order</field>
+        <field name="arch" type="xml">
+            <form string="Restaurant Order">
+                <sheet>
+                    <group>
+                        <field name="table_id"/>
+                        <field name="state"/>
+                        <field name="total_amount"/>
+                        <field name="order_line_ids">
+                            <tree>
+                                <field name="order_id"/>
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="price_unit"/>
+                                <field name="subtotal"/>
+                            </tree>
+                        </field>
+                        <!-- <field name="pos_order_id" readonly="1"/> -->
+                    </group>
+                    <footer>
+                        <!-- <button name="action_send_to_pos" type="object" string="Envoyer au PoS" class="oe_highlight" attrs="{'invisible': [('state', '=', 'paid')]}"/> -->
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View resto.order search -->
+    <!-- <record id="view_resto_order_search" model="ir.ui.view">
+        <field name="name">view.resto.order.search</field>
+        <field name="model">resto.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record> -->
+
+    <!-- Action resto.order -->
+    <record id="action_resto_order" model="ir.actions.act_window">
+        <field name="name">Resto Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resto.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Resto Order.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_restaurant_order" name="Commandes" parent="menu_restaurant" action="action_resto_order" />
+
+</odoo>

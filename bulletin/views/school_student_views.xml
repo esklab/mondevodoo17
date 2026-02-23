@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View school.student View Tree -->
+    <record id="view_school_student_tree" model="ir.ui.view">
+        <field name="name">view.school.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="birth_date"/>
+                <field name="note_ids"/>
+                <field name="state" widget="badge"
+                decoration-info="state == 'N'"
+                decoration-success="state == 'H'"
+                decoration-danger="state == 'B'"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View school.student form -->
+    <record id="view_school_student_form" model="ir.ui.view">
+        <field name="name">view.school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form string="School Student">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="birth_date"/>
+                        <field name="note_ids"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action school.student -->
+    <record id="action_school_student" model="ir.actions.act_window">
+        <field name="name">School Student</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+        id="_menu"
+        name="School Student"
+        action="action_school_student"
+        parent="student_school_menu"
+        sequence="100"/>
+
+</odoo>

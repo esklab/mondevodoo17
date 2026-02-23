@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Héritage de la vue patient.laboratory.test -->
+        <record id="view_patient_laboratory_test_form_custom" model="ir.ui.view">
+            <field name="name">view.patient.laboratory.test.form.custom</field>
+            <field name="model">patient.laboratory.test</field>
+            <field name="inherit_id" ref="acs_laboratory.patient_laboratory_test_view"/>
+            <field name="arch" type="xml">
+                <!-- Remplacement des boutons dans le header -->
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <!-- Ajout des nouveaux boutons -->
+                        <button name="action_validation_technique" 
+                                invisible="state!='draft'" 
+                                string="Validation Technique" 
+                                type="object" 
+                                class="oe_highlight"/>
+
+                        <!-- <button name="action_validation_biologique" 
+                                invisible="state!='validation_technique'" 
+                                string="Validation Biologique" 
+                                type="object" 
+                                class="oe_highlight"/> -->
+
+                        <button name="action_done" 
+                                invisible="state!='validation_biologique'" 
+                                string="Validation Biologique" 
+                                type="object" 
+                                class="oe_highlight"/>
+
+                        <button name="action_cancel" 
+                                invisible="state=='cancel'" 
+                                string="Annulé" 
+                                type="object"/>
+
+                        <button name="action_draft" 
+                                invisible="state not in ['done','cancel']" 
+                                string="Brouillon" 
+                                type="object" 
+                                class="oe_highlight"/>
+
+                        <button name="action_lab_test_send" 
+                                string="Envoyer par Email" 
+                                type="object" 
+                                invisible="state not in ['draft','done']"/>
+                        
+                        <!-- Barre d'état -->
+                        <field name="state" 
+                               widget="statusbar" 
+                               statusbar_visible="draft,validation_technique,validation_biologique,done,cancel"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

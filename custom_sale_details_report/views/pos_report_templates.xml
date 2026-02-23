@@ -1,0 +1,42 @@
+<odoo>
+    <template id="report_saledetails_custom" inherit_id="point_of_sale.report_saledetails">
+        <xpath expr="//div[t[@id='sales']]" position="before">
+            <t t-if="customer_data">
+                <div id="customer_details" style="margin-bottom: 30px;">
+                    <h3>Customer Details</h3>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Customer</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Date</th>
+                                <th class="text-end">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="customer_data" t-as="customer">
+                                <td><span t-out="customer['order_name']"/></td>
+                                <td><span t-out="customer['customer_name']"/></td>
+                                <td><span t-out="customer['customer_phone']"/></td>
+                                <td><span t-out="customer['customer_email']"/></td>
+                                <td><span t-out="customer['date_order']" t-options="{'widget': 'datetime'}"/></td>
+                                <td class="text-end">
+                                    <t t-if="currency['position']">
+                                        <span t-out="customer['amount_total']" t-options="{'widget': 'float', 'precision': currency['precision']}"/>
+                                        <span t-out="currency['symbol']"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-out="currency['symbol']"/>
+                                        <span t-out="customer['amount_total']" t-options="{'widget': 'float', 'precision': currency['precision']}"/>
+                                    </t>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

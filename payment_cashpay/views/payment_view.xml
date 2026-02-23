@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="payment_acquirer_form" model="ir.ui.view">
+        <field name="name">Cashpay Acquirer Form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <group name="provider_credentials" position='inside'>
+                <group modifiers="{'invisible': [('code', '!=', 'cashpay')]}">
+                    <field name="cashpay_api_login" modifiers="{'required':[('code', '=', 'cashpay'), ('state', '!=', 'disabled')]}"/>
+                    <field name="cashpay_api_key" modifiers="{'required':[('code', '=', 'cashpay'), ('state', '!=', 'disabled')]}"/>
+                    <field name="cashpay_api_refenrence" modifiers="{'required':[('code', '=', 'cashpay'), ('state', '!=', 'disabled')]}"/>
+                </group>
+            </group>        
+        </field>
+    </record>
+</odoo>

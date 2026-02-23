@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_freit_form" model="ir.ui.view">
+            <field name="name">product.template.freit_form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='detailed_type']" position="after">
+                    <field name="is_transport" invisible="detailed_type != 'service'"/>
+                </xpath>
+                <xpath expr="//field[@name='categ_id']" position="before">
+                    <field name="taxe_port" />
+                    <field name="ristourne_communale" />
+                </xpath>
+                <xpath expr="//field[@name='categ_id']" position="after">
+                    <field name="category_acconage_id" />
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Zones Pricing" invisible="not is_transport">
+                        <field name="zone_price_ids">
+                            <tree editable="top">
+                                <field name="zone_id" />
+                                <field name="price" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

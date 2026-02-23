@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Catégorie du module -->
+        <record id="module_category_workflow_engine" model="ir.module.category">
+            <field name="name">Workflow Engine</field>
+            <field name="description">Gestion des workflows et validation des processus</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Groupe: Administrateur Workflow -->
+        <record id="group_workflow_admin" model="res.groups">
+            <field name="name">Administrateur Workflow</field>
+            <field name="category_id" ref="module_category_workflow_engine"/>
+            <field name="comment">Ce groupe a un contrôle total sur les workflows.</field>
+        </record>
+
+        <!-- Groupe: Responsable Workflow -->
+        <record id="group_workflow_manager" model="res.groups">
+            <field name="name">Responsable Workflow</field>
+            <field name="category_id" ref="module_category_workflow_engine"/>
+            <field name="comment">Ce groupe peut gérer les états et transitions.</field>
+        </record>
+
+        <!-- Groupe: Utilisateur Workflow -->
+        <record id="group_workflow_user" model="res.groups">
+            <field name="name">Utilisateur Workflow</field>
+            <field name="category_id" ref="module_category_workflow_engine"/>
+            <field name="comment">Ce groupe peut initier et suivre les workflows.</field>
+        </record>
+    </data>
+</odoo>

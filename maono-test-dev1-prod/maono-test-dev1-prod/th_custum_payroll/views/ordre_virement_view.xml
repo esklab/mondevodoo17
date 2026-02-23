@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="order_virement_menu_action" model="ir.actions.act_window">
+        <field name="name">Order de virement</field>
+        <field name="res_model">hr.virement</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="help" type="html">
+            <p class="oe_view_noconten_create">
+                Vide
+            </p>
+        </field>
+    </record>
+
+    <record id="order_virement_form" model="ir.ui.view">
+        <field name="name">Order de virement</field>
+        <field name="model">hr.virement</field>
+        <field name="arch" type="xml">
+            <form string="Ordre de virement">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Description"/>
+                            <field name="date"/>
+                            <field name="mois_de_paie"/>
+                            <field name="annee"/>  
+                        </group>
+                        <group>
+                            <field name="check_number"/>
+                            <field name="bank_id"/> 
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="payslip" string="Fiche de paie">
+                            <field name="payslip_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="order_virement_tree" model="ir.ui.view">
+        <field name="name">order.virement.tree</field>
+        <field name="model">hr.virement</field>
+        <field name="arch" type="xml">
+            <tree string="Ordre de virement">
+                <field name="date"/>
+                <field name="name" string="Description"/>
+                <field name="mois_de_paie"/>
+                <field name="annee"/>
+                <field name="check_number"/>
+                <field name="bank_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem
+        id="ordre_virement_menu"
+        name="Ordre de virement"
+        action="order_virement_menu_action"
+        parent="hr_payroll.menu_hr_payroll_payslips"
+        sequence="100"/>
+</odoo>

@@ -1,0 +1,3051 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* freight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250115\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-12 16:25+0000\n"
+"PO-Revision-Date: 2025-02-12 16:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "<b style=\"color:#7C7BAD;\">Inland Shipment Type:</b><br/><br/>"
+msgstr "<b style=\"color:#7C7BAD;\">Type de transport intérieur:</b><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "<b style=\"color:#7C7BAD;\">Ocean Shipment Type:</b><br/><br/>"
+msgstr "<b style=\"color:#7C7BAD;\">Type de transport maritime:</b><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Agent:</b>"
+msgstr "<b>Agent:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Airline:</b>"
+msgstr "<b>Compagnie aérienne:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Barcode:</b>"
+msgstr "<b>Code Bar:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>CMR/RWB#/PRO#:</b>"
+msgstr "<b>CMR/RWB#/PRO#:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Consignee:</b>"
+msgstr "<b>Destinataire:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Dangerous Goods Info:</b>"
+msgstr "<b>Informations sur les marchandises dangereuses:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Dangerous Goods:</b>"
+msgstr "<b>Marchandises dangereuses:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Date:</b>"
+msgstr "<b>Date:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Destination:</b>"
+msgstr "<b>Destination:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Direction:</b>"
+msgstr "<b>Direction:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Discharge Port :</b>"
+msgstr "<b>Port de déchargement :</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Flight No:</b>"
+msgstr "<b>Numéro de vol:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Freight PC:</b>"
+msgstr "<b>PC de fret:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>From:</b>"
+msgstr "<b>De:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Gateway:</b>"
+msgstr "<b>Passerelle:</b>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Incoterm:</b>"
+msgstr "<b>Incoterm:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Inland Shipment Type:</b>"
+msgstr "<b>Type de transport intérieur:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Loading Port:</b>"
+msgstr "<b>Port de chargement:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>MAWB No:</b>"
+msgstr "<b>Numéro MAWB:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Move Type:</b>"
+msgstr "<b>Type de mouvement:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Note: </b>"
+msgstr "<b>Note: </b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Notes:</b>"
+msgstr "<b>Notes:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>OBL:</b>"
+msgstr "<b>OBL:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Ocean Shipment Type:</b>"
+msgstr "<b>Type de transport maritime:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Other PC:</b>"
+msgstr "<b>Autre PC:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Shipper:</b>"
+msgstr "<b>Expéditeur:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Shipping Line:</b>"
+msgstr "<b>Ligne de transport:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>To:</b>"
+msgstr "<b>À:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Tracking Numver:</b>"
+msgstr "<b>Numéro de suivi:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Transport:</b>"
+msgstr "<b>Transport:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Trucker No:</b>"
+msgstr "<b>Numéro de camionneur:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Trucker:</b>"
+msgstr "<b>Camionneur:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>User:</b>"
+msgstr "<b>Utilisateur:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Vessel:</b>"
+msgstr "<b>Navire:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Voyage No:</b>"
+msgstr "<b>Numéro de voyage:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid ""
+"<br/>\n"
+"                            <select id=\"freight_pc\" name=\"freight_pc\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"collect\">Collect</option>\n"
+"                                <option value=\"prepaid\">Prepaid</option>\n"
+"                            </select><br/>\n"
+"                            <select id=\"other_pc\" name=\"other_pc\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"collect\">Collect</option>\n"
+"                                <option value=\"prepaid\">Prepaid</option>\n"
+"                            </select><br/>"
+msgstr ""
+"<br/>\n"
+"                            <select id=\"freight_pc\" name=\"freight_pc\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"collect\">Collecte</option>\n"
+"                                <option value=\"prepaid\">Prépayé</option>\n"
+"                            </select><br/>\n"
+"                            <select id=\"other_pc\" name=\"other_pc\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"collect\">Collecte</option>\n"
+"                                <option value=\"prepaid\">Prépayé</option>\n"
+"                            </select><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size: 147%\">Operation</span><br/>\n"
+"                            <br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Type:</b><br/>\n"
+"                            <select id=\"operation\" name=\"operation\" style=\"margin-top: 10px;\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"direct\">Direct</option>\n"
+"                                <option value=\"master\">Master</option>\n"
+"                                <option value=\"house\">House</option>\n"
+"                            </select>\n"
+"                            <br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Direction:</b><br/><br/>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size: 147%\">Opération</span><br/>\n"
+"                            <br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Type:</b><br/>\n"
+"                            <select id=\"operation\" name=\"operation\" style=\"margin-top: 10px;\" required=\"True\" class=\"form-control\">\n"
+"                                <option value=\"direct\">Direct</option>\n"
+"                                <option value=\"master\">Maître</option>\n"
+"                                <option value=\"house\">Maison</option>\n"
+"                            </select>\n"
+"                            <br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Direction:</b><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Consignee</span><br/><br/>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Destinataire</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Shipper</span><br/><br/>"
+msgstr ""
+"<br/>\n"
+"                            <span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Expéditeur</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid ""
+"<br/><br/><br/><br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Transport:</b><br/>"
+msgstr ""
+"<br/><br/><br/><br/>\n"
+"                            <b style=\"color:#7C7BAD;\">Transport:</b><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "<font color=\"#0c0c0c\">Actual Payments</font>"
+msgstr "<font color=\"#0c0c0c\">Paiements réels</font>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "<font color=\"#0c0c0c\">Amounts Due</font>"
+msgstr "<font color=\"#0c0c0c\">Montants dus</font>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "<font color=\"#0c0c0c\">Expected Bills</font>"
+msgstr "<font color=\"#0c0c0c\">Factures attendues</font>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban_bookings
+msgid "<span class=\"fa fa-bars fa-lg\" title=\"Operation Dropdown\"/>"
+msgstr "<span class=\"fa fa-bars fa-lg\" title=\"Menu déroulant de l'opération\"/>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid ""
+"<span class=\"o_stat_text\">In:</span>\n"
+"                                    <span class=\"o_stat_text\">Out:</span>"
+msgstr ""
+"<span class=\"o_stat_text\">Entrée:</span>\n"
+"                                    <span class=\"o_stat_text\">Sortie:</span>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<span class=\"text-muted\">by</span>"
+msgstr "<span class=\"text-muted\">par</span>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size: "
+"147%\">General</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size: "
+"147%\">Général</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size: 147%\">Main "
+"Carriage</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size: 147%\">Transport principal</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Consignee</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Destinataire</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">General</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Général</span><br/><br/>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Main "
+"Carriage</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-size:21px;\">Transport principal</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Operation</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Opération</span><br/><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Shipper</span><br/><br/>"
+msgstr ""
+"<span style=\"color:#7C7BAD;font-weight:bold;font-"
+"size:21px;\">Expéditeur</span><br/><br/>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+msgid "<span><b>Create Booking</b></span>"
+msgstr "<span><b>Créer une réservation</b></span>"
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid ""
+"<span>I hereby declare that the contents of this consignment are fully and accurately described above by the proper shipping name and are classified, packaged, marked and labeled/placarded and are in all respects in proper condition\n"
+"                                for transport according to applicable international and national governmental regulations.</span>"
+msgstr ""
+"<span>Je déclare par la présente que le contenu de cette expédition est entièrement et précisément décrit ci-dessus par le nom d'expédition approprié et est classé, emballé, marqué et étiqueté/placardé et est en tout point en bon état\n"
+"                                pour le transport conformément aux réglementations gouvernementales internationales et nationales applicables.</span>"
+
+. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid ""
+"<span>It is agreed that the goods described herein are accepted in apparent good order and condition\n"
+"                                (except as noted) for carriage SUBJECT TO THE CONDITION S OF CONTRACT ON THE\n"
+"                                REVERSE HEREOF, ALL GOODS MAY BE CARRIED BY ANY OTHER MEANS INCLUDING ROAD\n"
+"                                OR ANY OTHER CARRIER UNLESS SPECIFIC CONTRARY INSTRUCTIONS ARE GIVEN\n"
+"                                HERE ON BY THE SHIPPER, AND SHIPPER AGREES THAT THE SHIPMENT MAY BE CARRIED\n"
+"                                VIA INTERMEDIATE STOPPING PLACES WHICH THE CARRIER DEEMS APPROPRIATE THE\n"
+"                                SHIPPER'S ATTENTION IS DRAWN TO THE NOTICE CONCERNING CARRIER'S LIMITATION\n"
+"                                OF LIABILITY. Shipper may increase such limitation of liability by declaring a higher value for\n"
+"                                carriage and paying a supplemental charge if required.</span>"
+msgstr ""
+"<span>Il est convenu que les marchandises décrites ici sont acceptées en bon état apparent\n"
+"                                (sauf indication contraire) pour le transport SOUS RÉSERVE DES CONDITIONS DU CONTRAT AU VERSO\n"
+"                                TOUTES LES MARCHANDISES PEUVENT ÊTRE TRANSPORTÉES PAR TOUT AUTRE MOYEN, Y COMPRIS PAR ROUTE\n"
+"                                OU TOUT AUTRE TRANSPORTEUR, SAUF INSTRUCTIONS CONTRAIRES SPÉCIFIQUES DONNÉES\n"
+"                                ICI PAR L'EXPÉDITEUR, ET L'EXPÉDITEUR ACCEPTE QUE L'EXPÉDITION PUISSE ÊTRE TRANSPORTÉE\n"
+"                                VIA DES POINTS D'ARRÊT INTERMÉDIAIRES QUE LE TRANSPORTEUR JUGE APPROPRIÉS\n 
+"                                L'ATTENTION DE L'EXPÉDITEUR EST ATTIRÉE SUR L'AVIS CONCERNANT LA LIMITATION DU TRANSPORTEUR DE RESPONSABILITÉ\n"
+"                                L'expéditeur peut augmenter cette limitation de responsabilité en déclarant une valeur plus élevée pour\n"
+"                                le transport et en payant un supplément de prix si nécessaire.</span>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid ""
+"<span>Shipper certifies that the particulars on the face hereof are correct and that insofar as any part of the consignment\n"
+"                            contains dangerous goods, such part is property decribed by name and is in proper condition for carriage by air\n"
+"                            according to the applicable Dangerous Goods Regulations.</span>"
+msgstr ""
+"<span>L'expéditeur certifie que les informations figurant sur le présent document sont correctes et que, dans la mesure où une partie de l'envoi\n"
+"                            contient des marchandises dangereuses, cette partie est correctement désignée par son nom et est en bon état pour le transport aérien\n"
+"                            conformément à la réglementation applicable sur les marchandises dangereuses.</span>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "<strong>Bill Number</strong>"
+msgstr "<strong>Numéro de facture</strong>"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "<strong>Consignee:</strong><br/>"
+msgstr ""
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "<b>Consignee:</b>"
+msgstr "<b>Destinataire:</b>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "<strong>Flight No</strong>"
+msgstr "<strong>Numéro de vol</strong>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "<strong>Gateway</strong>"
+msgstr "<strong>Passerelle</strong>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "<strong>MAWB No</strong>"
+msgstr "<strong>Numéro de MAWB</strong>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "<strong>Shipper:</strong><br/>"
+msgstr "<strong>Expéditeur:</strong><br/>"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "<strong>Tracking Number</strong>"
+msgstr "<strong>Numéro de suivi</strong>"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__ata
+msgid "ATA"
+msgstr "ATA"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__atd
+msgid "ATD"
+msgstr "ATD"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__access_warning
+msgid "Access warning"
+msgstr "Avertissement d'accès"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Accounting"
+msgstr "Comptabilité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_needaction
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_airline__active
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__active
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__active
+#: model:ir.model.fields,field_description:freight.field_freight_package__active
+#: model:ir.model.fields,field_description:freight.field_freight_port__active
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Activity"
+msgstr "Activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_exception_decoration
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'exception d'activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_state
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_type_icon
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__actual_date
+msgid "Actual"
+msgstr "Réel"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__actual_margin
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Actual Margin"
+msgstr "Marge réelle"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Actual Payable"
+msgstr "Payable réel"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Actual Receivable"
+msgstr "Recevable réel"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__partner_id
+msgid "Address"
+msgstr "Adresse"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__agent_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__agent_id
+#: model:ir.model.fields,field_description:freight.field_res_partner__agent
+#: model:ir.model.fields,field_description:freight.field_res_users__agent
+#: model:ir.model.fields.selection,name:freight.selection__register_invoice__type__agent
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+msgid "Agent"
+msgstr "Agent"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Agent:"
+msgstr "Agent :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__air
+#: model:ir.model.fields,field_description:freight.field_freight_port__air
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__transport__air
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__transport__air
+#: model:ir.model.fields.selection,name:freight.selection__freight_order__transport__air
+#: model:ir.model.fields.selection,name:freight.selection__freight_package_line__transport__air
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__transport__air
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Air"
+msgstr "Air"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+msgid "Air Waybill"
+msgstr "Lettre de transport aérien"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__airline_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__airline_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__airline_id
+#: model:ir.ui.menu,name:freight.menu_freight_airline_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_airline_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_airline_tree
+msgid "Airline"
+msgstr "Compagnie aérienne"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Airline:"
+msgstr "Compagnie aérienne :"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_airline_action
+msgid "Airlines"
+msgstr "Compagnies aériennes"
+
+#. module: freight
+#: model:ir.actions.report,name:freight.airway_bill_report
+msgid "Airway Bill"
+msgstr "Lettre de transport aérien"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_operation_all_action
+msgid "All Shipements"
+msgstr "Tous les envois"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_all_operation
+msgid "All Shipments"
+msgstr "Tous les envois"
+
+#. module: freight
+#: model:ir.model,name:freight.model_ir_attachment
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__vendor_attachment
+#: model:ir.model.fields,field_description:freight.field_freight_booking__attachment
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_attachment_count
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Attachment:"
+msgstr "Pièce jointe :"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__barcode
+#: model:ir.model.fields,field_description:freight.field_freight_operation__barcode
+msgid "Barcode"
+msgstr "Code-barres"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Barcode:"
+msgstr "Code-barres :"
+
+#. module: freight
+#: model:ir.actions.report,name:freight.bill_of_lading_report
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Bill Of Lading"
+msgstr "Connaissement"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__bills_paid_amount
+msgid "Bills"
+msgstr "Factures"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__bills_residual
+msgid "Bills Residual"
+msgstr "Résidu des factures"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/freight.py:0
+#: model:ir.model.fields,field_description:freight.field_freight_operation__booking_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "Booking"
+msgstr "Réservation"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+msgid "Booking #"
+msgstr "Réservation #"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__service_booking_count
+msgid "Booking Count"
+msgstr "Nombre de réservations"
+
+#. module: freight
+#: model:ir.model,name:freight.model_booking_tracker
+msgid "Booking Tracker"
+msgstr "Suivi des réservations"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__book_vals
+msgid "Booking Vals"
+msgstr "Valeurs de réservation"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_booking_action
+#: model:ir.ui.menu,name:freight.freight_house_freight_booking
+#: model:website.menu,name:freight.menu_bookings
+msgid "Bookings"
+msgstr "Réservations"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__truck_ref
+#: model:ir.model.fields,field_description:freight.field_freight_operation__truck_ref
+#: model:ir.model.fields,field_description:freight.field_freight_route__truck_ref
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "CMR/RWB#/PRO#:"
+msgstr "CMR/RWB#/PRO# :"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__campaign_id
+msgid "Campaign"
+msgstr "Campagne"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_product_product__shipment_ok
+#: model:ir.model.fields,field_description:freight.field_product_template__shipment_ok
+msgid "Can be Shipped"
+msgstr "Peut être expédié"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+msgid "Cancel"
+msgstr "Annuler"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__carrier_seal
+msgid "Carrier Seal"
+msgstr "Scellé du transporteur"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Check Availability"
+msgstr "Vérifier la disponibilité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__class_number
+msgid "Class Number"
+msgstr "Numéro de classe"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_shipment_not_found
+msgid "Click Here to Track Shipment."
+msgstr "Cliquez ici pour suivre l'envoi."
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create_thankyou
+msgid "Click Here to check your bookings."
+msgstr "Cliquez ici pour vérifier vos réservations."
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.view_freight_booking_action
+msgid "Click to create a new bookings."
+msgstr "Cliquez pour créer une nouvelle réservation."
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.view_freight_airline_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_incoterms_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_move_type_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_operation_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_operation_all_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_operation_house_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_operation_master_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_package_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_port_action
+#: model_terms:ir.actions.act_window,help:freight.view_freight_vessel_action
+msgid "Click to create a new port."
+msgstr "Cliquez pour créer un nouveau port"
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.view_freight_service_action
+msgid "Click to create a new service."
+msgstr "Cliquez pour créer un nouveau service."
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.view_freight_trucker_action
+msgid "Click to create a new trucker."
+msgstr "Cliquez pour créer un nouveau transporteur routier."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_airline__code
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__code
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__code
+#: model:ir.model.fields,field_description:freight.field_freight_package__code
+#: model:ir.model.fields,field_description:freight.field_freight_port__code
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__code
+msgid "Code"
+msgstr "Code"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__freight_pc__collect
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__other_pc__collect
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__freight_pc__collect
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__other_pc__collect
+msgid "Collect"
+msgstr "Collecte"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__color
+#: model:ir.model.fields,field_description:freight.field_freight_operation__color
+msgid "Color"
+msgstr "Couleur"
+
+
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_configuration
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__consignee_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__consignee_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__consignee_id
+#: model:ir.model.fields,field_description:freight.field_res_partner__consignee
+#: model:ir.model.fields,field_description:freight.field_res_users__consignee
+#: model:ir.model.fields.selection,name:freight.selection__register_invoice__type__consignee
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Consignee"
+msgstr "Destinataire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Consignee:"
+msgstr "Destinataire:"
+
+#. module: freight
+#: model:ir.model,name:freight.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.fleet_vehicle_log_contract_menu
+msgid "Contracts"
+msgstr "Contrats"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+msgid "Convert To Shipment"
+msgstr "Convertir en expédition"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__state__converted
+msgid "Converted"
+msgstr "Converti"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__cost
+#: model:ir.model.fields,field_description:freight.field_freight_service__cost
+msgid "Cost"
+msgstr "Coût"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_airline__country
+#: model:ir.model.fields,field_description:freight.field_freight_port__country
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__country
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_filter
+msgid "Country"
+msgstr "Pays"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Create"
+msgstr "Créer"
+
+#. module: freight
+#: model:ir.model,name:freight.model_register_invoice
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+msgid "Create Invoice"
+msgstr "Créer une facture"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.register_quote_wizard_action_sale
+msgid "Create Quotation"
+msgstr "Créer un devis"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_airline__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_booking__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_operation__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_order__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_package__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_port__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_route__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_service__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__create_uid
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__create_uid
+#: model:ir.model.fields,field_description:freight.field_register_invoice__create_uid
+#: model:ir.model.fields,field_description:freight.field_shipment_log__create_uid
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_airline__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_booking__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_operation__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_order__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_package__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_port__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_route__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_service__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__create_date
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__create_date
+#: model:ir.model.fields,field_description:freight.field_register_invoice__create_date
+#: model:ir.model.fields,field_description:freight.field_shipment_log__create_date
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__currency_id
+#: model:ir.model.fields,field_description:freight.field_freight_service__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__register_invoice__invoice_type__customer
+msgid "Customer"
+msgstr "Client"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/wizard/register_invoice_freight.py:0
+#: model:ir.actions.act_window,name:freight.register_invoice_wizard_action
+#: model:ir.actions.act_window,name:freight.register_invoice_wizard_action_invoice
+#: model:ir.model.fields,field_description:freight.field_freight_service__customer_invoice
+#, python-format
+msgid "Customer Invoice"
+msgstr "Facture client"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Customer Invoices"
+msgstr "Factures clients"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Customer Invoices(Receivables)"
+msgstr "Factures clients(Créances)"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__access_url
+msgid "Customer Portal URL"
+msgstr "URL du portail client"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.menu_account_customer_freight
+msgid "Customers"
+msgstr "Clients"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Customs"
+msgstr "Douanes"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__custom_clearnce_date
+#: model:ir.model.fields,field_description:freight.field_freight_operation__custom_clearnce_date
+msgid "Customs Clearance Date"
+msgstr "Date de dédouanement"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__dangerous_goods
+#: model:ir.model.fields,field_description:freight.field_freight_operation__dangerous_goods
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__dangerous_goods
+msgid "Dangerous Goods"
+msgstr "Marchandises dangereuses"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__dangerous_goods_notes
+#: model:ir.model.fields,field_description:freight.field_freight_operation__dangerous_goods_notes
+msgid "Dangerous Goods Info"
+msgstr "Informations sur les marchandises dangereuses"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Dangerous Goods Info"
+msgstr "Informations sur les marchandises dangereuses"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Dangerous Goods"
+msgstr "Marchandises dangereuses"
+
+#. module: freight
+#: model:ir.actions.client,name:freight.action_freight
+#: model:ir.ui.menu,name:freight.dasboard_id
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__date
+#: model:ir.model.fields,field_description:freight.field_freight_booking__datetime
+#: model:ir.model.fields,field_description:freight.field_freight_operation__datetime
+#: model:ir.model.fields,field_description:freight.field_freight_route__datetime
+#: model:ir.model.fields,field_description:freight.field_shipment_log__date
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Date"
+msgstr "Date"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban_bookings
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Date:"
+msgstr "Date:"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__declaration_date
+#: model:ir.model.fields,field_description:freight.field_freight_operation__declaration_date
+msgid "Declaration Date"
+msgstr "Date de déclaration"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__declaration_number
+#: model:ir.model.fields,field_description:freight.field_freight_operation__declaration_number
+msgid "Declaration Number"
+msgstr "Numéro de déclaration"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban_bookings
+msgid "Delete"
+msgstr "Supprimer"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__delivery
+msgid "Delivery"
+msgstr "Livraison"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__name
+#: model:ir.model.fields,field_description:freight.field_freight_order__name
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__name
+#: model:ir.model.fields,field_description:freight.field_freight_route__name
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__name
+#: model:ir.model.fields,field_description:freight.field_freight_service__name
+#: model:ir.model.fields,field_description:freight.field_shipment_log__description
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Description"
+msgstr "Description"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Destination"
+msgstr "Destination"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__destination_location_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__destination_location_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__destination_location_id
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Destination Location"
+msgstr "Lieu de destination"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Destination location"
+msgstr "Lieu de destination"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Destination:"
+msgstr "Destination"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.actions.act_window,name:freight.view_freight_operation_action
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__operation__direct
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__operation__direct
+#: model:ir.ui.menu,name:freight.freight_direct_operation
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#, python-format
+msgid "Direct"
+msgstr "Directe"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.model.fields,field_description:freight.field_freight_booking__direction
+#: model:ir.model.fields,field_description:freight.field_freight_operation__direction
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#, python-format
+msgid "Direction"
+msgstr "Direction"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Discharge Port"
+msgstr "Port de décharge"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Discharge Port:"
+msgstr "Port de décharge"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_airline__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_booking__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_operation__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_order__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_package__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_port__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_route__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_service__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__display_name
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__display_name
+#: model:ir.model.fields,field_description:freight.field_register_invoice__display_name
+#: model:ir.model.fields,field_description:freight.field_shipment_log__display_name
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Download"
+msgstr "Télécharger"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Download Pdf"
+msgstr "Télécharger Pdf"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Download Pdf!"
+msgstr "Télécharger Pdf!"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_item_line__type__dry
+#: model:ir.model.fields.selection,name:freight.selection__freight_order__type__dry
+#: model:ir.model.fields.selection,name:freight.selection__freight_package_line__type__dry
+msgid "Dry"
+msgstr "Secs"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__eta
+msgid "ETA"
+msgstr "ETA"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__etd
+msgid "ETD"
+msgstr "ETD"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban_bookings
+msgid "Edit"
+msgstr "Editer"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Effective Date"
+msgstr "Date de mise en œuvre"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Expected Margin"
+msgstr "Marge attendue"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Expected Payable"
+msgstr "Paiement attendues"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Expected Receivable"
+msgstr "Créances attendues"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__direction__export
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__direction__export
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Export"
+msgstr "Export"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__ocean_shipment_type__fcl
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__ocean_shipment_type__fcl
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__ocean_shipment_type__fcl
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "FCL"
+msgstr "FCL"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__inland_shipment_type__ftl
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__inland_shipment_type__ftl
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__inland_shipment_type__ftl
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "FTL"
+msgstr "FTL"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_port__state
+msgid "Fed. State"
+msgstr "Fed. State"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__flash_point
+msgid "Flash Point"
+msgstr "Point d'éclair"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_fleet_vehicle_menu
+#: model:ir.ui.menu,name:freight.freight_fleet_vehicles
+msgid "Fleet"
+msgstr "Flotte"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__flight_no
+#: model:ir.model.fields,field_description:freight.field_freight_operation__flight_no
+#: model:ir.model.fields,field_description:freight.field_freight_route__flight_no
+msgid "Flight No"
+msgstr "Numéro de vol"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Flight No:"
+msgstr "Numéro de vol:"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Follow up"
+msgstr "Suivi"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_follower_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_partner_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__activity_type_icon
+#: model:ir.model.fields,help:freight.field_freight_operation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icon e.g. fa-tasks"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_sale_order__freight_id
+#: model:ir.ui.menu,name:freight.freight_root
+msgid "Freight"
+msgstr "Fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_airline
+msgid "Freight Airline"
+msgstr "Fret aérien"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_booking
+msgid "Freight Bookings"
+msgstr "Inscriptions de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_dashboard
+msgid "Freight Dashboard"
+msgstr "Tableau de bord du fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_incoterms
+msgid "Freight Incoterms"
+msgstr "Incoterms de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_item_line
+msgid "Freight Item Line"
+msgstr "Ligne d'article de fret"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__freight_item_lines
+msgid "Freight Item Lines"
+msgstr "Lignes d'article de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_log
+msgid "Freight Log"
+msgstr "Journal de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_move_type
+msgid "Freight Move Type"
+msgstr "Type de mouvement de fret"
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_nbr_moves_in
+msgid "Freight Nbr Moves In"
+msgstr "Nombre de mouvements de fret entrant"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_nbr_moves_out
+msgid "Freight Nbr Moves Out"
+msgstr "Nombre de mouvements de fret sortant"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_operation
+#: model:ir.model.fields,field_description:freight.field_freight_booking__freight_id
+#: model:ir.model.fields,field_description:freight.field_stock_picking__freight_operation_id
+msgid "Freight Operation"
+msgstr "Opération de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_order
+msgid "Freight Order"
+msgstr "Commande de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_orders
+msgid "Freight Orders"
+msgstr "Commandes de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__freight_pc
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_pc
+msgid "Freight PC"
+msgstr "PC de fret"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Freight PC:"
+msgstr "PC de fret :"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_package
+msgid "Freight Package"
+msgstr "Colis de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_package_line
+msgid "Freight Package Line"
+msgstr "Ligne de colis de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_packages
+msgid "Freight Packages"
+msgstr "Colis de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_port
+msgid "Freight Port"
+msgstr "Port de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_route
+msgid "Freight Route"
+msgstr "Itinéraire de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_route_service
+msgid "Freight Route Service"
+msgstr "Service d'itinéraire de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_routes
+#: model:ir.model.fields,field_description:freight.field_stock_picking__route_ids
+msgid "Freight Routes"
+msgstr "Itinéraires de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_service
+msgid "Freight Service"
+msgstr "Service de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__freight_services
+#: model:ir.model.fields,field_description:freight.field_freight_route__freight_services
+msgid "Freight Services"
+msgstr "Services de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_trucker
+msgid "Freight Trucker"
+msgstr "Transporteur de fret"
+
+#. module: freight
+#: model:ir.model,name:freight.model_freight_vessel
+msgid "Freight Vessel"
+msgstr "Navire de fret"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_account_bank_statement_line__freight_operation_id
+#: model:ir.model.fields,field_description:freight.field_account_move__freight_operation_id
+#: model:ir.model.fields,field_description:freight.field_account_payment__freight_operation_id
+msgid "Freight operation"
+msgstr "Opération de fret"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "From"
+msgstr "De"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__from_location_id
+msgid "From Location"
+msgstr "Lieu d'origine"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__from_warehouse_id
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__from_warehouse
+msgid "From Warehouse"
+msgstr "Depuis l'entrepôt"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "From:"
+msgstr "De :"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Gateway"
+msgstr "Passerelle"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Gateway:"
+msgstr "Passerelle :"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "General"
+msgstr "Général"
+
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Generate from orders"
+msgstr "Générer à partir des commandes"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__global_zone
+msgid "Global Zone"
+msgstr "Zone mondiale"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Gross Weight"
+msgstr "Poids brut"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__gross_weight
+#: model:ir.model.fields,field_description:freight.field_freight_order__gross_weight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__gross_weight
+msgid "Gross Weight (KG)"
+msgstr "Poids brut (KG)"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_filter
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__harmonize
+msgid "Harmonize"
+msgstr "Harmoniser"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__has_message
+#: model:ir.model.fields,field_description:freight.field_freight_operation__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.actions.act_window,name:freight.view_freight_operation_house_action
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__operation__house
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__operation__house
+#: model:ir.ui.menu,name:freight.freight_master_operation
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "House"
+msgstr "Maison"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_airline__icao
+msgid "ICAO"
+msgstr "OACI"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__id
+msgid "ID"
+msgstr "ID"
+
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__barcode
+#: model:ir.model.fields,help:freight.field_freight_operation__barcode
+msgid "ID used for shipment identification."
+msgstr "ID utilisé pour l'identification de l'expédition."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__imdg_code
+msgid "IMDG Code"
+msgstr "Code IMDG"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_exception_icon
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__activity_exception_icon
+#: model:ir.model.fields,help:freight.field_freight_operation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône indiquant une activité d'exception."
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__message_needaction
+#: model:ir.model.fields,help:freight.field_freight_operation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages nécessitent votre attention."
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__message_has_error
+#: model:ir.model.fields,help:freight.field_freight_booking__message_has_sms_error
+#: model:ir.model.fields,help:freight.field_freight_operation__message_has_error
+#: model:ir.model.fields,help:freight.field_freight_operation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__direction__import
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__direction__import
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Import"
+msgstr "Import"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__incoterm
+#: model:ir.model.fields,field_description:freight.field_freight_operation__incoterm
+msgid "Incoterm"
+msgstr "Incoterm"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Incoterm:"
+msgstr "Incoterm:"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_incoterms_action
+#: model:ir.ui.menu,name:freight.menu_freight_incoterms_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_incoterms_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_incoterms_tree
+msgid "Incoterms"
+msgstr "Incoterms"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__inland_shipment_type
+#: model:ir.model.fields,field_description:freight.field_freight_operation__inland_shipment_type
+#: model:ir.model.fields,field_description:freight.field_freight_route__inland_shipment_type
+msgid "Inland Shipment Type"
+msgstr "Type d'expédition terrestre"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_incoterms__name
+msgid ""
+"International Commercial Terms are a series of predefined commercial terms "
+"used in international transactions."
+msgstr "Les Incoterms sont une série de termes commerciaux prédéfinis utilisés dans les transactions internationales."
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_package_line__imdg_code
+msgid "International Maritime Dangerous Goods Code"
+msgstr "Code maritime international des marchandises dangereuses"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__invoice_paid_amount
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__invoice_count
+msgid "Invoice Count"
+msgstr "Nombre de factures"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__invoice_residual
+msgid "Invoice Residual"
+msgstr "Solde de la facture"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_register_invoice__invoice_type
+msgid "Invoice Type"
+msgstr "Solde de la facture"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_register_invoice__type
+msgid "Invoice to"
+msgstr "Facture à"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_service__invoiced
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__container
+msgid "Is Container?"
+msgstr "Est un conteneur ?"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Items"
+msgstr "Articles"
+
+#. module: freight
+#: model:ir.model,name:freight.model_account_move
+msgid "Journal Entry"
+msgstr "Écriture comptable"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__ocean_shipment_type__lcl
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__ocean_shipment_type__lcl
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__ocean_shipment_type__lcl
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "LCL"
+msgstr "LCL"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__inland_shipment_type__ltl
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__inland_shipment_type__ltl
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__inland_shipment_type__ltl
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "LTL"
+msgstr "LTL"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__land
+#: model:ir.model.fields,field_description:freight.field_freight_port__land
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__transport__land
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__transport__land
+#: model:ir.model.fields.selection,name:freight.selection__freight_order__transport__land
+#: model:ir.model.fields.selection,name:freight.selection__freight_package_line__transport__land
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__transport__land
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Land"
+msgstr "Terre"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Landing Port:"
+msgstr "Port d'arrivée :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_airline__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_booking__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_operation__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_order__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_package__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_port__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_route__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_service__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__write_uid
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__write_uid
+#: model:ir.model.fields,field_description:freight.field_register_invoice__write_uid
+#: model:ir.model.fields,field_description:freight.field_shipment_log__write_uid
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_airline__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_booking__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_operation__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_order__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_package__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_port__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_route__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_service__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__write_date
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__write_date
+#: model:ir.model.fields,field_description:freight.field_register_invoice__write_date
+#: model:ir.model.fields,field_description:freight.field_shipment_log__write_date
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Loading Port"
+msgstr "Port de chargement"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_shipment_log__location
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__mawb_no
+#: model:ir.model.fields,field_description:freight.field_freight_operation__mawb_no
+#: model:ir.model.fields,field_description:freight.field_freight_route__mawb_no
+msgid "MAWB No"
+msgstr "Numéro MAWB"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "MAWB No:"
+msgstr "Numéro MAWB :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__main_carriage
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Main Carriage"
+msgstr "Transport principal"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Main Carriage Transport"
+msgstr "Transport principal de la cargaison"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__margin
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Margin"
+msgstr "Marge"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.actions.act_window,name:freight.view_freight_operation_master_action
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__operation__master
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__operation__master
+#: model:ir.ui.menu,name:freight.freight_house_operation
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#, python-format
+msgid "Master"
+msgstr "Maître"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_masters
+msgid "Master Data"
+msgstr "Données maîtres"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__material_description
+msgid "Material Description"
+msgstr "Description du matériau"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__medium_id
+msgid "Medium"
+msgstr "Moyen"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_has_error
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison du message"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "More Info"
+msgstr "Plus d'informations"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__move_type
+#: model:ir.model.fields,field_description:freight.field_freight_operation__move_type
+msgid "Move Types"
+msgstr "Types de mouvement"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Move Type:"
+msgstr "Type de mouvement :"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_move_type_action
+#: model:ir.ui.menu,name:freight.menu_freight_move_type_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_move_type_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_move_type_tree
+msgid "Move Types"
+msgstr "Types de mouvement"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__my_activity_date_deadline
+#: model:ir.model.fields,field_description:freight.field_freight_operation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Date limite de mon activité"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#, python-format
+msgid "My Profile"
+msgstr "Mon profil"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.model.fields,field_description:freight.field_freight_airline__name
+#: model:ir.model.fields,field_description:freight.field_freight_booking__name
+#: model:ir.model.fields,field_description:freight.field_freight_dashboard__name
+#: model:ir.model.fields,field_description:freight.field_freight_incoterms__name
+#: model:ir.model.fields,field_description:freight.field_freight_move_type__name
+#: model:ir.model.fields,field_description:freight.field_freight_operation__name
+#: model:ir.model.fields,field_description:freight.field_freight_package__name
+#: model:ir.model.fields,field_description:freight.field_freight_port__name
+#: model:ir.model.fields,field_description:freight.field_freight_trucker__name
+#: model:ir.model.fields,field_description:freight.field_freight_vessel__name
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__name
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/bookings.py:0
+#: code:addons/freight/models/bookings.py:0
+#: code:addons/freight/models/bookings.py:0
+#: code:addons/freight/models/bookings.py:0
+#: code:addons/freight/models/bookings.py:0
+#: code:addons/freight/models/freight.py:0
+#: code:addons/freight/models/freight.py:0
+#: code:addons/freight/models/freight.py:0
+#: code:addons/freight/models/freight.py:0
+#, python-format
+msgid "New"
+msgstr "Nouveau"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_calendar_event_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Prochain événement du calendrier d'activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_date_deadline
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_summary
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_type_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de prochaine activité"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/stock_quant.py:0
+#, python-format
+msgid "No Stock On Hand"
+msgstr "Pas de stock disponible"
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.product_template_action_product
+msgid "No product found. Let's create one!"
+msgstr "Aucun produit n'a été trouvé. Créons-en un !"
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.shipment_stock_move_action
+msgid "No stock move found"
+msgstr "Aucun mouvement de stock trouvé"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__name
+msgid "Note"
+msgstr "Note"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__notes
+#: model:ir.model.fields,field_description:freight.field_freight_operation__notes
+msgid "Notes"
+msgstr "Notes"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Notes:"
+msgstr "Notes:"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_needaction_counter
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_has_error_counter
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_operation__freight_nbr_moves_in
+msgid "Number of incoming stock moves in the past 12 months"
+msgstr "Nombre de mouvements de stock entrants au cours des 12 derniers mois"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__message_needaction_counter
+#: model:ir.model.fields,help:freight.field_freight_operation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__message_has_error_counter
+#: model:ir.model.fields,help:freight.field_freight_operation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_operation__freight_nbr_moves_out
+msgid "Number of outgoing stock moves in the past 12 months"
+msgstr "Nombre de mouvements de stock sortants au cours des 12 derniers mois"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__obl
+#: model:ir.model.fields,field_description:freight.field_freight_operation__obl
+#: model:ir.model.fields,field_description:freight.field_freight_route__obl
+msgid "OBL"
+msgstr "OBL"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "OBL:"
+msgstr "OBL:"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__ocean
+#: model:ir.model.fields,field_description:freight.field_freight_port__ocean
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__transport__ocean
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__transport__ocean
+#: model:ir.model.fields.selection,name:freight.selection__freight_order__transport__ocean
+#: model:ir.model.fields.selection,name:freight.selection__freight_package_line__transport__ocean
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__transport__ocean
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Ocean"
+msgstr "Océan"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__ocean_shipment_type
+#: model:ir.model.fields,field_description:freight.field_freight_operation__ocean_shipment_type
+#: model:ir.model.fields,field_description:freight.field_freight_route__ocean_shipment_type
+msgid "Ocean Shipment Type"
+msgstr "Type d'expédition océanique"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_fleet_vehicle_odometer_menu
+msgid "Odometers"
+msgstr "Compteurs kilométriques"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__oncarriage
+msgid "On Carriage"
+msgstr "Sur transport"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.model.fields,field_description:freight.field_freight_booking__operation
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__type
+#: model:ir.model.fields,field_description:freight.field_freight_operation__operation
+#: model:ir.model.fields,field_description:freight.field_freight_order__type
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__type
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "Operation"
+msgstr "Opération"
+
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Operation Details"
+msgstr "Détails de l'opération"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.ui.menu,name:freight.freight_operations
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_tree
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+#, python-format
+msgid "Operations"
+msgstr "Opération"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Order Information"
+msgstr "Informations sur la commande"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Orders"
+msgstr "Commandes"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_route__obl
+msgid "Original Bill Of Lading"
+msgstr "Connaissement original"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__obl
+#: model:ir.model.fields,help:freight.field_freight_operation__obl
+msgid "Original Bill Of Landing"
+msgstr "Connaissement original"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__other_pc
+#: model:ir.model.fields,field_description:freight.field_freight_operation__other_pc
+msgid "Other PC"
+msgstr "Autre PC"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Other PC:"
+msgstr "Autre PC:"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_stock_picking_type_menu
+msgid "Overview"
+msgstr "Aperçu"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__package
+#: model:ir.model.fields,field_description:freight.field_freight_order__package
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__package
+#: model:ir.model.fields,field_description:freight.field_freight_route__package_ids
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Package"
+msgstr "Colis"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_package_action
+#: model:ir.ui.menu,name:freight.menu_freight_package_id
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_package_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_package_tree
+msgid "Packages"
+msgstr "Colis"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__Package_group
+msgid "Packaging Group:"
+msgstr "Groupe d'emballage :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__parent_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__parent_id
+msgid "Parent"
+msgstr "Parent"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_register_invoice__partner_id
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Payable Due"
+msgstr "Payable dû"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__picking_id
+msgid "Picking"
+msgstr "Préparation"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Picking list"
+msgstr "Liste de préparation"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__operation_picking_ids
+msgid "Pickings"
+msgstr "Préparations"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__pickup
+msgid "Pickup"
+msgstr "Ramassage"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/wizard/register_invoice_freight.py:0
+#, python-format
+msgid "Please define income account for this product: \"%s\" (id:%d)."
+msgstr "Veuillez définir un compte de revenus pour ce produit : \"%s\" (id:%d)."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__access_url
+msgid "Portal Access URL"
+msgstr "URL d'accès au portail"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.actions.act_window,name:freight.view_freight_port_action
+#: model:ir.ui.menu,name:freight.menu_freight_port_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_tree
+#, python-format
+msgid "Ports"
+msgstr "Ports"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_booking_detail
+msgid "Post"
+msgstr "Publier"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__precarriage
+msgid "Pre Carriage"
+msgstr "Pré-transport"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__freight_pc__prepaid
+#: model:ir.model.fields.selection,name:freight.selection__freight_booking__other_pc__prepaid
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__freight_pc__prepaid
+#: model:ir.model.fields.selection,name:freight.selection__freight_operation__other_pc__prepaid
+msgid "Prepaid"
+msgstr "Prépayé"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__picking_group_id
+msgid "Procurement Group"
+msgstr "Groupe d'approvisionnement"
+
+#. module: freight
+#: model:ir.model,name:freight.model_product_template
+msgid "Product"
+msgstr "Produit"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Qty"
+msgstr "Qté"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__qty
+#: model:ir.model.fields,field_description:freight.field_freight_order__qty
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__qty
+#: model:ir.model.fields,field_description:freight.field_freight_service__qty
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: freight
+#: model:ir.model,name:freight.model_stock_quant
+msgid "Quants"
+msgstr "Quantités"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Quotations"
+msgstr "Devis"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__service_quote_count
+msgid "Quote Count"
+msgstr "Nombre de devis"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__rating_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__rating_ids
+msgid "Ratings"
+msgstr "Évaluations"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_tree
+msgid "Receivable Due"
+msgstr "Recevable dû"
+
+#. module: freight
+#: model:ir.model.fields.selection,name:freight.selection__freight_item_line__type__reefer
+#: model:ir.model.fields.selection,name:freight.selection__freight_order__type__reefer
+#: model:ir.model.fields.selection,name:freight.selection__freight_package_line__type__reefer
+msgid "Reefer"
+msgstr "Réfrigéré"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__reference
+msgid "Reference"
+msgstr "Référence"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__refrigerated
+msgid "Refrigerated"
+msgstr "Réfrigéré"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_reporting
+msgid "Reporting"
+msgstr "Rapports"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__activity_user_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__route_id
+#: model:ir.model.fields,field_description:freight.field_freight_service__route_id
+msgid "Route"
+msgstr "Itinéraire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Route Operation"
+msgstr "Opération d'itinéraire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Routes"
+msgstr "Itinéraires"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__message_has_sms_error
+#: model:ir.model.fields,field_description:freight.field_freight_operation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur de livraison SMS"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__sale
+#: model:ir.model.fields,field_description:freight.field_freight_service__sale
+msgid "Sale"
+msgstr "Vente"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__sale_orders
+msgid "Sale Orders"
+msgstr "Commandes de vente"
+
+#. module: freight
+#: model:ir.model,name:freight.model_sale_order
+msgid "Sales Order"
+msgstr "Commandes de vente"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/freight.py:0
+#, python-format
+msgid "Sales Order(s)"
+msgstr "Bon(s) de commande"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+msgid "Search Bookings"
+msgstr "Rechercher des réservations"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_filter
+msgid "Search Operations"
+msgstr "Rechercher des opérations"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__access_token
+msgid "Security Token"
+msgstr "Token de sécurité"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_shipment_stage__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_service_action
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__service_id
+#: model:ir.model.fields,field_description:freight.field_freight_service__service_id
+#: model:ir.model.fields,field_description:freight.field_register_invoice__service_ids
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_service_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_service_tree
+msgid "Service"
+msgstr "Service"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.product_product_action_services
+#: model:ir.ui.menu,name:freight.fleet_vehicle_log_services_menu
+#: model:ir.ui.menu,name:freight.menu_services
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Services"
+msgstr "Services"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__service_count
+msgid "Services Count"
+msgstr "Nombre de services"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Shiping Line:"
+msgstr "Ligne d'expédition :"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/bookings.py:0
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#, python-format
+msgid "Shipment"
+msgstr "Expédition"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Shipment Details:"
+msgstr "Détails de l'expédition :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__package_line_id
+#: model:ir.model.fields,field_description:freight.field_freight_order__shipment_id
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__shipment_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__shipment_id
+#: model:ir.model.fields,field_description:freight.field_freight_service__shipment_id
+#: model:ir.model.fields,field_description:freight.field_shipment_log__shipment_id
+msgid "Shipment ID"
+msgstr "ID d'expédition"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/stock_quant.py:0
+#: model:ir.actions.act_window,name:freight.shipment_dashboard_open_quants
+#, python-format
+msgid "Shipment Inventory Report"
+msgstr "Rapport d'inventaire d'expédition"
+
+#. module: freight
+#: model:ir.actions.server,name:freight.action_view_shipment_quants
+#: model:ir.ui.menu,name:freight.freight_menu_valuation
+msgid "Shipment Inventory report"
+msgstr "Rapport d'inventaire d'expédition"
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__operation_product_id
+msgid "Shipment Product"
+msgstr "Produit d'expédition"
+
+#. module: freight
+#: model:ir.model,name:freight.model_shipment_log
+msgid "Shipment Stage"
+msgstr "Étape de l'expédition"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.shipment_stock_move_action
+#: model:ir.ui.menu,name:freight.freight_stock_move_menu
+msgid "Shipment Stock Moves"
+msgstr "Mouvements de stock de l'expédition"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_shipment_not_found
+msgid "Shipment not found."
+msgstr "Expédition non trouvée."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__shipments_ids
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Shipments"
+msgstr "Expéditions"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.model.fields,field_description:freight.field_freight_booking__shipper_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__shipper_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__shipper_id
+#: model:ir.model.fields,field_description:freight.field_res_partner__shipper
+#: model:ir.model.fields,field_description:freight.field_res_users__shipper
+#: model:ir.model.fields.selection,name:freight.selection__register_invoice__type__shipper
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#: model_terms:ir.ui.view,arch_db:freight.register_invoice_view_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_filter
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "Shipper"
+msgstr "Expéditeur"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__shipper_seal
+msgid "Shipper Seal"
+msgstr "Scellé de l'expéditeur"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Shipper:"
+msgstr "Expéditeur :"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Shippers"
+msgstr "Expéditeurs"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__shipping_date
+msgid "Shipping Date"
+msgstr "Date d'expédition"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__shipping_line_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__shipping_line_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__shipping_line_id
+msgid "Shipping Line"
+msgstr "Ligne maritime"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Signed"
+msgstr "Signé"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__size
+msgid "Size"
+msgstr "Taille"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/ir_attachment.py:0
+#, python-format
+msgid "Sorry, you are not allowed to access this document."
+msgstr "Désolé, vous n'êtes pas autorisé à accéder à ce document."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__source_id
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+msgid "Source"
+msgstr "Source"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__source_location_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__source_location_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__source_location_id
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+msgid "Source Location"
+msgstr "Emplacement d'origine"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#, python-format
+msgid "Source location"
+msgstr "Emplacement d'origine"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__stage_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__stage_id
+msgid "Stage"
+msgstr "Étape"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_port_filter
+msgid "State"
+msgstr "État"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__activity_state
+#: model:ir.model.fields,help:freight.field_freight_operation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : La date limite est déjà passée\n"
+"Aujourd'hui : La date de l'activité est aujourd'hui\n"
+"Planifié : Activités futures."
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Storage"
+msgstr "Stockage"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__temperature
+msgid "Temperature"
+msgstr "Température"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__booking_id
+msgid "Tender"
+msgstr "Appel d'offres"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+msgid "There are currently no bookings for your account."
+msgstr "Il n'y a actuellement aucune réservation pour votre compte."
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/stock_quant.py:0
+#, python-format
+msgid ""
+"This analysis gives you an overview of the current stock level of your "
+"products."
+msgstr ""
+"Cette analyse vous donne un aperçu du niveau actuel des stocks de vos "
+"produits."
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"C'est un nom qui vous aide à suivre vos différents efforts de campagne, "
+"par exemple, Fall_Drive, Christmas_Special"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "C'est la méthode de livraison, par exemple, carte postale, e-mail ou bannière publicitaire"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"C'est la source du lien, par exemple, moteur de recherche, un autre domaine ou le nom "
+"d'une liste de diffusion"
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.shipment_stock_move_action
+msgid ""
+"This menu gives you the full traceability of inventory\n"
+"                operations on a specific product. You can filter on the product\n"
+"                to see all the past or future movements for the product."
+msgstr ""
+"Ce menu vous donne la traçabilité complète des opérations d'inventaire\n"
+"                sur un produit spécifique. Vous pouvez filtrer sur le produit\n"
+"                pour voir tous les mouvements passés ou futurs du produit."
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "To"
+msgstr "À"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__to_location_id
+msgid "To Location"
+msgstr "À l'emplacement"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__to_warehouse_id
+#: model:ir.model.fields.selection,name:freight.selection__freight_route__type__to_warehouse
+msgid "To Warehouse"
+msgstr "Au dépôt"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "To:"
+msgstr "À :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__total_bills
+msgid "Total Bills(Payables)"
+msgstr "Total des factures (à payer)"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Total Gross"
+msgstr "Total brut"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__total_invoiced
+msgid "Total Invoiced(Receivables"
+msgstr "Total facturé (à recevoir)"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Total Volume"
+msgstr "Volume total"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.track_shipment
+msgid "Track"
+msgstr "Suivi"
+
+#. module: freight
+#: model:website.menu,name:freight.menu_shipment
+msgid "Track Shipment"
+msgstr "Suivi de l'expédition"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.track_shipment
+msgid "Track Your Shipment"
+msgstr "Suivez votre expédition"
+
+#. module: freight
+#: model_terms:ir.actions.act_window,help:freight.product_template_action_product
+msgid "Track your stock quantities by creating storable warehouse shipments."
+msgstr "Suivez vos quantités de stock en créant des expéditions de dépôt stockables."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__track_ids
+msgid "Tracker Lines"
+msgstr "Lignes de suivi"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.freight_success
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Tracking"
+msgstr "Suivi"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__tracking_number
+#: model:ir.model.fields,field_description:freight.field_freight_operation__tracking_number
+msgid "Tracking Number"
+msgstr "Numéro de suivi"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Tracking Number:"
+msgstr "Numéro de suivi :"
+
+#. module: freight
+#: model:ir.model,name:freight.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model:ir.model.fields,field_description:freight.field_freight_booking__transport
+#: model:ir.model.fields,field_description:freight.field_freight_operation__transport
+#: model:ir.model.fields,field_description:freight.field_freight_order__transport
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__transport
+#: model:ir.model.fields,field_description:freight.field_freight_route__transport
+#: model_terms:ir.ui.view,arch_db:freight.portal_my_bookings
+#, python-format
+msgid "Transport"
+msgstr "Transport"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_trucker_action
+#: model:ir.model.fields,field_description:freight.field_freight_booking__trucker
+#: model:ir.model.fields,field_description:freight.field_freight_operation__trucker
+#: model:ir.model.fields,field_description:freight.field_freight_route__trucker
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_trucker_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_trucker_tree
+msgid "Trucker"
+msgstr "Chauffeur"
+
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__trucker_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__trucker_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__trucker_id
+msgid "Trucker "
+msgstr "Chauffeur"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__trucker_number
+#: model:ir.model.fields,field_description:freight.field_freight_operation__trucker_number
+#: model:ir.model.fields,field_description:freight.field_freight_route__trucker_number
+msgid "Trucker No"
+msgstr "Numero de Chauffeur"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Trucker No:"
+msgstr "Numero de Chauffeur:"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Trucker:"
+msgstr "Chauffeur:"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route__type
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_booking_form
+msgid "Type"
+msgstr ""
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.track_shipment
+msgid "Type Your Tracking Number, Example., DIRECT/2019/01/28/00001"
+msgstr "Entrez votre numéro de suivi, Exemple : DIRECT/2019/01/28/00001"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__activity_exception_decoration
+#: model:ir.model.fields,help:freight.field_freight_operation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type de l'activité exceptionnelle sur l'enregistrement."
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__un_number
+msgid "UN Number"
+msgstr "Numéro ONU"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_package_line__un_number
+msgid ""
+"UN numbers are four-digit numbers that identify hazardous materials, and "
+"articles in the framework of international transport"
+msgstr ""
+"Les numéros ONU sont des numéros à quatre chiffres qui identifient les "
+"matériaux dangereux et les articles dans le cadre du transport international"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Unreserve"
+msgstr "Annuler la réservation"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_package_form
+msgid "Used In"
+msgstr "Utilisé dans"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__operator_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__operator_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_booking_tracker__user_id
+msgid "User ID"
+msgstr "ID Utilisateur"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "User:"
+msgstr "Utilisateur :"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__vgm
+msgid "VGM"
+msgstr "VGM"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_route_service__partner_id
+#: model:ir.model.fields,field_description:freight.field_freight_service__partner_id
+#: model:ir.model.fields.selection,name:freight.selection__register_invoice__invoice_type__vendor
+msgid "Vendor"
+msgstr "Fournisseur"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_operation__vendor_bill_count
+msgid "Vendor Bill Count"
+msgstr "Nombre de factures fournisseur"
+
+#. module: freight
+#. odoo-javascript
+#: code:addons/freight/static/src/js/freight_dashboard.js:0
+#: code:addons/freight/static/src/xml/freight_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+#, python-format
+msgid "Vendor Bills"
+msgstr "Factures fournisseur"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_operation_form
+msgid "Vendor Bills(Payables)"
+msgstr "Factures fournisseur (À payer)"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/wizard/register_invoice_freight.py:0
+#: model:ir.actions.act_window,name:freight.register_invoice_wizard_action_vendor_invoice
+#: model:ir.model.fields,field_description:freight.field_freight_service__vendor_invoice
+#, python-format
+msgid "Vendor Invoice"
+msgstr "Facture fournisseur"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_service__vendor_invoiced
+msgid "Vendor Invoiced"
+msgstr "Facturé au fournisseur"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.menu_account_supplier
+msgid "Vendors"
+msgstr "Fournisseurs"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_package_line__vgm
+msgid "Verified gross mass"
+msgstr "Masse brute vérifiée"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__vessel_id
+#: model:ir.model.fields,field_description:freight.field_freight_operation__vessel_id
+#: model:ir.model.fields,field_description:freight.field_freight_route__vessel_id
+msgid "Vessel"
+msgstr "Navire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Vessel:"
+msgstr "Navire :"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.view_freight_vessel_action
+#: model:ir.ui.menu,name:freight.menu_freight_vessel_id
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_vessel_form
+#: model_terms:ir.ui.view,arch_db:freight.view_freight_vessel_tree
+msgid "Vessels"
+msgstr "Navires"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_package__volume
+#: model_terms:ir.ui.view,arch_db:freight.airway_bill
+#: model_terms:ir.ui.view,arch_db:freight.bill_of_lading
+msgid "Volume"
+msgstr "Volume"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_item_line__volume
+#: model:ir.model.fields,field_description:freight.field_freight_order__volume
+#: model:ir.model.fields,field_description:freight.field_freight_package_line__volume
+msgid "Volume (CBM)"
+msgstr "Volume (CBM)"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__voyage_no
+#: model:ir.model.fields,field_description:freight.field_freight_operation__voyage_no
+#: model:ir.model.fields,field_description:freight.field_freight_route__voyage_no
+msgid "Voyage No"
+msgstr "Numéro de voyage"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create
+msgid "Voyage No:"
+msgstr "Numéro de voyage :"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_warehouse
+msgid "Warehouse"
+msgstr "Entrepôt"
+
+#. module: freight
+#: model:ir.actions.act_window,name:freight.product_template_action_product
+#: model:ir.ui.menu,name:freight.freight_menu_product_variant_config_stock
+msgid "Warehouse Shipments"
+msgstr "Expéditions d'entrepôt"
+
+#. module: freight
+#: model:ir.ui.menu,name:freight.freight_menu_action_warehouse_form
+msgid "Warehouses"
+msgstr "Entrepôts"
+
+#. module: freight
+#: model:ir.model.fields,field_description:freight.field_freight_booking__website_message_ids
+#: model:ir.model.fields,field_description:freight.field_freight_operation__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__website_message_ids
+#: model:ir.model.fields,help:freight.field_freight_operation__website_message_ids
+msgid "Website communication history"
+msgstr "Historique de communication du site web"
+
+#. module: freight
+#: model:ir.model.fields,help:freight.field_freight_booking__attachment
+msgid "You can attach the copy of your document"
+msgstr "Vous pouvez joindre la copie de votre document"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/freight.py:0
+#, python-format
+msgid "You have already created stock picking once %s"
+msgstr "Vous avez déjà créé une réception de stock une fois %s"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/freight.py:0
+#, python-format
+msgid "You must set a Customer Location for this partner %s"
+msgstr "Vous devez définir un emplacement client pour ce partenaire %s"
+
+#. module: freight
+#. odoo-python
+#: code:addons/freight/models/freight.py:0
+#, python-format
+msgid ""
+"You must set a Vendor Location for this partner %s or Customer/Vendor is not"
+" set on Route"
+msgstr ""
+"Vous devez définir un emplacement fournisseur pour ce partenaire %s ou le client/fournisseur n'est pas"
+" défini sur l'itinéraire"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create_thankyou
+msgid "Your Booking"
+msgstr "Votre réservation"
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.portal_booking_create_thankyou
+msgid "has been created."
+msgstr "a été créée."
+
+#. module: freight
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban
+#: model_terms:ir.ui.view,arch_db:freight.helpdesk_ticket_view_kanban_bookings
+msgid "oe_kanban_text_red"
+msgstr "oe_kanban_text_red"
+
+#. module: freight
+#: model:ir.model,name:freight.model_shipment_stage
+msgid "shipment Stage"
+msgstr "Phase de l'expédition"

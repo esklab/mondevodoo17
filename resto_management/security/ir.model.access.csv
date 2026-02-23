@@ -1,0 +1,5 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_resto_menu_manager,resto_menu_manager,model_resto_menu,base.group_user,1,1,1,1
+access_resto_order_manager,resto_order_manager,model_resto_order,base.group_user,1,1,1,1
+access_resto_order_line_manager,resto_order_line_manager,model_resto_order_line,base.group_user,1,1,1,1
+access_resto_table_manager,resto_table_manager,model_resto_table,base.group_user,1,1,1,1

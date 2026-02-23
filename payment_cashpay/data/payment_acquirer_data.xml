@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+    <record id="flooz_payment_icon" model="ir.attachment">
+        <field name="name">Flooz</field>
+        <field name="datas" type="base64" file="payment_cashpay/static/src/img/flooz.png"/>
+    </record>
+    <record id="tmoney_payment_icon" model="ir.attachment">
+        <field name="name">Tmoney</field>
+        <field name="datas" type="base64" file="payment_cashpay/static/src/img/tmoney.png"/>
+    </record>
+    <record id="ecobank_payment_icon" model="ir.attachment">
+        <field name="name">Ecobank</field>
+        <field name="datas" type="base64" file="payment_cashpay/static/src/img/ecobank.png"/>
+    </record>
+
+    <record id="payment_acquirer_cashpay" model="payment.provider">
+        <field name="name">Cashpay</field>
+        <field name="code">cashpay</field>
+        <field name="image_128" type="base64" file="payment_cashpay/static/description/icon.png"/>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+        <field name="cashpay_api_login">api.maonosarl</field>
+        <field name="cashpay_api_key">in2fRUdRKUtn4fL35zRN2hq4g85EqcQmc0fa</field>
+        <field name="cashpay_api_refenrence">158</field>
+        <field name="payment_method_ids" eval="[flooz_payment_icon,tmoney_payment_icon,ecobank_payment_icon]"/>
+    </record>
+
+    <record id="payment_method_cashpay" model="account.payment.method">
+        <field name="name">Cashpay</field>
+        <field name="code">cashpay</field>
+        <field name="payment_type">inbound</field>
+    </record>    
+   
+    </data>
+</odoo>

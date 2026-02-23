@@ -1,0 +1,22 @@
+<odoo>
+    <record id="view_hr_contract_form" model="ir.ui.view">
+        <field name="name">hr.contract.form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='salary_info']" position="before">
+                <group string="Salary Details" invisible="not show_salary_details">
+                    <field name="type_salary_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="rang_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="echelon_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="available_rang_ids" invisible="1"/>
+                    <field name="available_echelon_ids" invisible="1"/>
+                    <field name="montant" readonly="1" invisible="1"/>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='contract_type_id']" position="after">
+                <field name="show_salary_details"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_hospitalisation_annual" model="ir.actions.report">
+        <field name="name">Rapport Annuel d'Hospitalisation</field>
+        <field name="model">acs.hospitalisation.annual.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">acs_hospitalisation_report.report_hospitalisation_annual</field>
+        <field name="binding_model_id" ref="model_acs_hospitalisation_annual_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_hospitalisation_annual">
+        <t t-call="web.html_container">
+            <t t-set="year" t-value="year or time.strftime('%Y')"/>
+            
+            <div class="header" style="text-align: center; margin-bottom: 20px;">
+                <h1 style="font-size: 18pt;">RAPPORT DES ACTIVITES EN HOSPITALISATION <t t-esc="year"/></h1>
+                <h3 style="font-size: 14pt;">Genre sélectionné: <t t-esc="selected_gender"/></h3>
+            </div>
+            
+            <table class="table table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Mois</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Total admissions</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Hommes</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Femmes</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Autres</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Total sorties</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Sorties contre avis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="zip(monthly_data['months'], monthly_data['entries'], monthly_data['gender_data'], monthly_data['discharges'], monthly_data['discharged_patients'])" t-as="month">
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;"><t t-esc="month[0]"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[1]"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[2]['male']"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[2]['female']"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[2]['other']"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[3]"/></td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="month[4]"/></td>
+                        </tr>
+                    </t>
+                    <tr style="font-weight: bold; background-color: #f2f2f2;">
+                        <td style="border: 1px solid #ddd; padding: 8px;">TOTAL</td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(monthly_data['entries'])"/></td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(m['male'] for m in monthly_data['gender_data'])"/></td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(m['female'] for m in monthly_data['gender_data'])"/></td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(m['other'] for m in monthly_data['gender_data'])"/></td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(monthly_data['discharges'])"/></td>
+                        <td style="border: 1px solid #ddd; padding: 8px; text-align: center;"><t t-esc="sum(monthly_data['discharged_patients'])"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </t>
+    </template>
+</odoo>

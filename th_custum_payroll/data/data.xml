@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<!-- delete some rule -->
+	<delete id="/" model="hr.salary.rule"/>
+	<!-- Catégorie de rubrique -->
+	<data noupdate="0">
+		<record  id="togo_salary_structure_id" model="hr.payroll.structure">
+			<field name="name">PAIE TOGO</field>
+			<field name="type_id" ref="hr_contract.structure_type_employee"/>
+		</record>
+		<record  id="gain_imposable" model="hr.salary.rule.category">
+			<field name="name">GAIN IMPOSABLE</field>
+			<field name="code">BASIC</field>
+		</record>
+
+		<record  id="retenu" model="hr.salary.rule.category">
+			<field name="name">RETENUE</field>
+			<field name="code">DED</field>
+		</record>
+
+		<record  id="total_retenu" model="hr.salary.rule.category">
+			<field name="name">TOTAL RETENUE</field>
+			<field name="code">TOTAL RETENUE</field>
+		</record>
+
+		<record  id="total_brut_cat" model="hr.salary.rule.category">
+			<field name="name">TOTAL BRUT</field>
+			<field name="code">TOTAL BRUT</field>
+		</record>
+
+		<record  id="autre_gain" model="hr.salary.rule.category">
+			<field name="name">AUTRE GAIN</field>
+			<field name="code">ATR</field>
+		</record>
+
+		<record  id="autre_retenu" model="hr.salary.rule.category">
+			<field name="name">AUTRE RETENUE</field>
+			<field name="code">ARTN</field>
+		</record>
+
+		<record  id="charge_patronale" model="hr.salary.rule.category">
+			<field name="name">CHARGE PATRONALE</field>
+			<field name="code">COMP</field>
+		</record>
+	</data>
+	<!-- Rubriques avec des règles de calcule salariale-->
+	<record  id="salaire_categoriel" model="hr.salary.rule">
+		<field name="name">Salaire categoriel</field>
+		<field name="code">salcat</field>
+		<field name="category_id" ref="gain_imposable" />
+		<field name="sequence">100</field>
+		<field name="struct_id" ref="togo_salary_structure_id"/>
+		<field name="active">TRUE</field>
+		<field name="appears_on_payslip">TRUE</field>
+		<field name="amount_select">code</field>
+		<field name="amount_python_compute">result = contract.wage</field>
+	</record>
+	<data>
+		<record  id="sursalaire" model="hr.salary.rule">
+			<field name="name">sursalaire</field>
+			<field name="code">sursalaire</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">111</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.sursalaire</field>
+		</record>
+
+		<record id="prime_anciennete" model="hr.salary.rule">
+    <field name="name">Prime d'ancienneté</field>
+    <field name="code">anc</field>
+    <field name="category_id" ref="gain_imposable" />
+    <field name="sequence">112</field>
+    <field name="struct_id" ref="togo_salary_structure_id"/>
+    <field name="active">TRUE</field>
+    <field name="appears_on_payslip">TRUE</field>
+    <field name="amount_select">code</field>
+    <field name="amount_python_compute">result = 0.0
+if contract.x_studio_anne_dexprience_dans_ce_domaine:
+	annees_experience = int(contract.x_studio_anne_dexprience_dans_ce_domaine)
+	# Calcul des primes
+	if annees_experience &gt;= 2:
+		result += salcat * 0.05
+	if 2 &lt; annees_experience &lt;= 20:
+		result += salcat * 0.01 * (annees_experience - 2)
+	if annees_experience &gt; 20:
+		result += salcat * 0.01 * (20 - 2)
+		result += salcat * 0.02 * (annees_experience - 20)
+    </field>
+</record>
+
+
+		
+		<record  id="heure_sup_20" model="hr.salary.rule">
+			<field name="name">Heures suplémentaires 20%</field>
+			<field name="code">heure_sup_20</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">115</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.taux_horaire  * contract.heure_sup_20*1.20</field>
+		</record>
+		<record  id="heure_sup_40" model="hr.salary.rule">
+			<field name="name">Heures suplémentaires 40%</field>
+			<field name="code">heure_sup_40</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">116</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.taux_horaire  * contract.heure_sup_40*1.4</field>
+		</record>
+		
+		<record  id="heure_sup_65" model="hr.salary.rule">
+			<field name="name">Heures suplémentaires 65%</field>
+			<field name="code">heure_sup_65</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">117</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.taux_horaire  * contract.heure_sup_65*1.65</field>
+		</record>
+		
+		<record  id="heure_sup_100" model="hr.salary.rule">
+			<field name="name">Heures suplémentaires 100%</field>
+			<field name="code">heure_sup_100</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">118</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.taux_horaire  * contract.heure_sup_100*2</field>
+		</record>
+		
+		<record  id="heure_sup_nuit_100" model="hr.salary.rule">
+			<field name="name">Heures suplémentaires nuit</field>
+			<field name="code">heure_sup_nuit_100</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">119</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.taux_horaire  * contract.heure_sup_nuit*2</field>
+		</record>
+
+		<record id="prime_logoement_15" model="hr.salary.rule">
+    <field name="name">Prime de logement à 15%</field>
+    <field name="code">prime_logoement_15</field>
+    <field name="category_id" ref="gain_imposable" />
+    <field name="sequence">120</field>
+    <field name="struct_id" ref="togo_salary_structure_id"/>
+    <field name="active">TRUE</field>
+    <field name="appears_on_payslip">TRUE</field>
+    <field name="amount_select">code</field>
+    <field name="amount_python_compute">result = 0.0
+if contract.type_salary_id and contract.rang_id:
+	type_salary = contract.type_salary_id.name
+	rang = contract.rang_id.name
+	if type_salary == 'CATEGORIES':
+		if rang in ['1ER', '2EME', '3EME']:
+			result = 50000.0
+		elif rang in ['4EME', '5EME', '6EME']:
+			result = 60000.0
+		elif rang == '7EME':
+			result = 65000.0
+		else:
+			result = 0.0
+	elif type_salary == 'CLASSES':
+		if rang in ['I', 'II', 'III']:
+			result = 80000.0
+		elif rang == 'IV':
+			result = 100000.0
+		elif rang in ['V', 'VI']:
+			result = 150000.0
+		elif rang == 'VII':
+			result = 250000.0
+		elif rang == 'VIII':
+			result = 450000.0
+		else:
+			result = 0.0
+	else:
+		result = 0.0
+    </field>
+</record>
+
+		<record  id="prime_fonction" model="hr.salary.rule">
+			<field name="name">Prime de fonction</field>
+			<field name="code">prime_fonction</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">121</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_fonction</field>
+		</record>
+		<record  id="absence" model="hr.salary.rule">
+			<field name="name">Absence</field>
+			<field name="code">absence</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">122</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = -((salcat + anc + sursalaire + prime_fonction)/30 * contract.absence_a_deduire)</field>
+		</record>
+		<record  id="treizieme_mois" model="hr.salary.rule">
+			<field name="name">13ème mois</field>
+			<field name="code">treizieme_mois</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">125</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_13_mois</field>
+		</record>
+		<record  id="indeminite_retraite_ir" model="hr.salary.rule">
+			<field name="name">Prime de logement à 15%</field>
+			<field name="code">indeminite_retraite_ir</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">135</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.indeminite_retraite_ir</field>
+		</record>
+
+		<record  id="indeminite_retraite_non_ir" model="hr.salary.rule">
+			<field name="name">Prime de logement à non 15%</field>
+			<field name="code">indeminite_retraite_non_ir</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">136</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.indeminite_retraite_non_ir</field>
+		</record>
+
+		<record  id="prime_garde" model="hr.salary.rule">
+			<field name="name">Prime de Garde</field>
+			<field name="code">prime_garde</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">140</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_garde</field>
+		</record>
+
+		<record  id="prime_resultat" model="hr.salary.rule">
+			<field name="name">Prime de Resultat</field>
+			<field name="code">prime_resultat</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">145</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_resultat</field>
+		</record>
+		<record  id="rapel_salaire_imp" model="hr.salary.rule">
+			<field name="name">Rappel sur salaire</field>
+			<field name="code">rapel_salaire_imp</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">150</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.rapel_salaire_imp</field>
+		</record>
+		<record  id="prime_transport" model="hr.salary.rule">
+			<field name="name">Prime de transport</field>
+			<field name="code">prime_transport</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">160</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_transport</field>
+		</record>
+		<record  id="prime_risque" model="hr.salary.rule">
+			<field name="name">Prime de risque</field>
+			<field name="code">prime_risque</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">170</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_risque</field>
+		</record>
+
+		<record  id="prime_caisse" model="hr.salary.rule">
+			<field name="name">Prime de caisse</field>
+			<field name="code">prime_caisse</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">175</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_caisse</field>
+		</record>
+
+
+		<record  id="prime_speciale" model="hr.salary.rule">
+			<field name="name">Prime spéciale</field>
+			<field name="code">prime_speciale</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">180</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_speciale</field>
+		</record>
+
+		<record  id="astreinte" model="hr.salary.rule">
+			<field name="name">Astreinte</field>
+			<field name="code">astreinte</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">190</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.astreinte</field>
+		</record>
+
+		<record  id="prime_responsabilite" model="hr.salary.rule">
+			<field name="name">Prime de responsabilté</field>
+			<field name="code">prime_responsabilite</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">200</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_responsabilite</field>
+		</record>
+
+		<record  id="prime_specialite" model="hr.salary.rule">
+			<field name="name">Prime de spécialité</field>
+			<field name="code">prime_specialite</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">210</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_specialite</field>
+		</record>
+
+		<record  id="appel_urgence" model="hr.salary.rule">
+			<field name="name">Appel d'Urgence</field>
+			<field name="code">appel_urgence</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">220</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.appel_urgence</field>
+		</record>
+
+		<record  id="autres_primes" model="hr.salary.rule">
+			<field name="name">Autres primes</field>
+			<field name="code">autres_primes</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">221</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.autres_primes</field>
+		</record>
+
+		<record  id="total_brut" model="hr.salary.rule">
+			<field name="name">Total brut</field>
+			<field name="code">total_brut</field>
+			<field name="category_id" ref="total_brut_cat" />
+			<field name="sequence">225</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = categories['BASIC'] + categories['ALW']</field>
+		</record>
+
+		<record  id="charge_patronale_rule" model="hr.salary.rule">
+			<field name="name">Charges patronales</field>
+			<field name="code">charge_patronale_rule</field>
+			<field name="category_id" ref="charge_patronale" />
+			<field name="sequence">230</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">percentage</field>
+			<field name="amount_percentage_base">categories['BASIC']</field>
+			<field name="amount_percentage">22.5</field>
+		</record>
+
+		<record  id="retenue_css" model="hr.salary.rule">
+			<field name="name">Retenue CNSS</field>
+			<field name="code">retenue_css</field>
+			<field name="category_id" ref="retenu" />
+			<field name="sequence">400</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">cnss =  round(categories['BASIC']* 0.09)
+result = cnss</field>
+		</record>
+
+		<record  id="retenue_irpp" model="hr.salary.rule">
+			<field name="name">Retenue IRPP</field>
+			<field name="code">retenue_irpp</field>
+			<field name="category_id" ref="retenu" />
+			<field name="sequence">410</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">salaireBrut = categories['BASIC']
+cnss = salaireBrut * 4 / 100
+semibrut = salaireBrut - cnss - prime_caisse - indeminite_retraite_ir
+abattement = semibrut * 28 / 100 if (semibrut &lt; 833333) else 233333
+if payslip.employee_id.est_un_gerant:
+	abattement = semibrut * 20 / 100
+revenu_semi_net = semibrut - abattement
+allocation = 10000 *  employee.children
+revenu_net = revenu_semi_net - allocation
+baseirpp = (int(revenu_net/1000)) * 1000
+
+tranche1 = baseirpp  &lt; 75000 >= 0
+tranche2 = baseirpp  &lt; 250000 and baseirpp >= 75000
+tranche3 = baseirpp  &lt; 500000 and baseirpp >= 250000
+tranche4 = baseirpp  &lt; 750000 and baseirpp >=  500000
+tranche5 = baseirpp  &lt; 1000000 and baseirpp >=  750000
+tranche6 = baseirpp  &lt; 1250000 and baseirpp >=  1000000
+tranche7 = baseirpp  &lt; 1666667 and baseirpp >=  1250000
+tranche8 = baseirpp >= 1666667
+
+
+tranche1_irpp = (75000 - 0)*0/100
+tranche2_irpp = (250000 - 75000)*3/100
+tranche3_irpp = (500000 - 250000)*10/100
+tranche4_irpp = (750000 - 500000)*15/100
+tranche5_irpp = (1000000 - 750000)*20/100
+tranche6_irpp = (1250000 - 1000000)*25/100
+tranche7_irpp = (1666667 - 1250000)*30/100
+tranche8_irpp = (baseirpp - 1666667)*35/100
+
+if tranche1:
+	irpp = baseirpp * 0/100
+if tranche2 :
+	irpp = tranche1_irpp + (baseirpp - 75000) * 3/100
+if tranche3 :
+	irpp = tranche1_irpp + tranche2_irpp + (baseirpp - 250000) * 10/100
+if tranche4 :
+	irpp = tranche1_irpp + tranche2_irpp + tranche3_irpp +  (baseirpp - 500000) * 15/100
+if tranche5 :
+	irpp = tranche1_irpp + tranche2_irpp + tranche3_irpp + tranche4_irpp +  (baseirpp - 750000) * 20/100
+if tranche6 :
+	irpp = tranche1_irpp + tranche2_irpp + tranche3_irpp + tranche4_irpp + tranche5_irpp +  (baseirpp - 1000000) * 25/100
+if tranche7 :
+	irpp = tranche1_irpp + tranche2_irpp + tranche3_irpp + tranche4_irpp + tranche5_irpp + tranche6_irpp +  (baseirpp - 1250000) * 30/100
+if tranche8 :
+	irpp = tranche1_irpp + tranche2_irpp + tranche3_irpp + tranche4_irpp + tranche5_irpp + tranche6_irpp + tranche7_irpp + (baseirpp - 1666667) * 35/100
+
+irpp = int(irpp / 10) * 10
+result = irpp</field>
+		</record>
+
+		<record  id="total_cotisation" model="hr.salary.rule">
+			<field name="name">Total cotisation</field>
+			<field name="code">total_cotisation</field>
+			<field name="category_id" ref="total_retenu" />
+			<field name="sequence">520</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = categories['DED']</field>
+		</record>
+
+		
+		<record  id="prime_panier" model="hr.salary.rule">
+			<field name="name">Prime de panier</field>
+			<field name="code">prime_panier</field>
+			<field name="category_id" ref="autre_retenu" />
+			<field name="sequence">540</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_panier</field>
+		</record>
+
+		<record  id="prime_salisure" model="hr.salary.rule">
+			<field name="name">Prime de salissure</field>
+			<field name="code">prime_salisure</field>
+			<field name="category_id" ref="autre_gain" />
+			<field name="sequence">545</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_salisure</field>
+		</record>
+
+		<record  id="adjustement" model="hr.salary.rule">
+			<field name="name">Ajustement salaire net</field>
+			<field name="code">adjustement</field>
+			<field name="category_id" ref="autre_retenu" />
+			<field name="sequence">550</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.adjustement</field>
+		</record>
+
+		<record  id="retenu_13_mois" model="hr.salary.rule">
+			<field name="name">Retenue 13ème mois</field>
+			<field name="code">retenu_13_mois</field>
+			<field name="category_id" ref="autre_retenu" />
+			<field name="sequence">555</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.prime_13_mois</field>
+		</record>
+
+		<record  id="remboursement_pret" model="hr.salary.rule">
+			<field name="name">Remboursement Prêt</field>
+			<field name="code">remboursement_pret</field>
+			<field name="category_id" ref="autre_retenu" />
+			<field name="sequence">560</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = contract.remboursement_pret</field>
+		</record>
+
+		<record  id="trop_percu" model="hr.salary.rule">
+			<field name="name">Trop Perçu sur Prime</field>
+			<field name="code">trop_percu</field>
+			<field name="category_id" ref="gain_imposable" />
+			<field name="sequence">570</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = -contract.trop_percu</field>
+		</record>
+
+		<record  id="salaire_net" model="hr.salary.rule">
+			<field name="name">Salaire net</field>
+			<field name="code">salaire_net</field>
+			<field name="category_id" ref="hr_payroll.NET" />
+			<field name="sequence">2000</field>
+			<field name="struct_id" ref="togo_salary_structure_id"/>
+			<field name="active">TRUE</field>
+			<field name="appears_on_payslip">TRUE</field>
+			<field name="amount_select">code</field>
+			<field name="amount_python_compute">result = categories['BASIC'] + categories['ATR'] + categories['ALW'] - categories['DED']</field>
+		</record>		
+	</data>
+</odoo>

@@ -1,0 +1,77 @@
+<odoo>
+    <record id="view_dock_price_tree" model="ir.ui.view">
+        <field name="name">dock.price.tree</field>
+        <field name="model">dock.price</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type" />
+                <field name="service_type"/>
+                <field name="dock_category_id" />
+                <field name="category_id"/>
+                <field name="container_type_id"/>
+                <field name="year"/>
+                <field name="price"/>
+                <field name="is_active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_dock_price_form" model="ir.ui.view">
+        <field name="name">dock.price.form</field>
+        <field name="model">dock.price</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type"  />
+                            <field name="service_type"/>
+                            <field name="dock_category_id" />
+                            <field name="category_id"/>
+                            <field name="container_type_id"/>
+                        </group>
+                        <group>
+                            <field name="year"/>
+                            <field name="price"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Historique des Prix">
+                            <field name="history_ids">
+                                <tree editable="false">
+                                    <field name="updated_date"/>
+                                    <field name="previous_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action pour gérer les types -->
+    <record id="action_dock_price" model="ir.actions.act_window">
+        <field name="name">Gestion des prix</field>
+        <field name="res_model">dock.price</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_dock_price_history_tree" model="ir.ui.view">
+        <field name="name">dock.price.history.tree</field>
+        <field name="model">dock.price.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="dock_price_id"/>
+                <field name="service_type"/>
+                <field name="category_id"/>
+                <field name="container_type_id"/>
+                <field name="year"/>
+                <field name="previous_price"/>
+                <field name="updated_date"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_restaurant_orders" model="ir.actions.act_window">
+        <field name="name">Commandes POS</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_restaurant_orders"
+          name="Commandes POS"
+          parent="menu_restaurant"
+          action="action_restaurant_orders"/>
+
+</odoo>

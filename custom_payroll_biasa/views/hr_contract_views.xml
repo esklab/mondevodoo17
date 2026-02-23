@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_hr_contract_form" model="ir.ui.view">
+        <field name="name">hr.contract.form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='salary_info']" position="before">
+                <group string="Salary Details" invisible="not show_salary_details">
+                    <field name="type_agent_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="classe_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="echelon_id" widget="selection" options="{'no_create': True}"/>
+                    <field name="available_classe_ids" invisible="1"/>
+                    <field name="available_echelon_ids" invisible="1"/>
+                    <field name="montant" readonly="1" invisible="1"/>
+                    <!--<button name="promote_to_next_echelon" type="object" string="Promote to Next Echelon" class="oe_highlight" invisible="1"/>-->
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='contract_type_id']" position="after">
+                <field name="show_salary_details"/>
+            </xpath>
+            <xpath expr="//field[@name='type_paiement']" position="after">
+                <field name="montantprimedeplacement"/>
+                <field name="nombre_de_fois_deplacement"/>                    
+                <field name="montantprimegarde"/>
+                <field name="nombre_de_fois_garde"/>
+                <field name="montantprimesuggestion"/>
+                <field name="nombre_de_fois_suggestion"/>
+                <field name="montantprimeastreinte"/>
+                <field name="nombre_de_fois_astreinte"/>
+                <field name="montantprimepermanence"/>
+                <field name="nombre_de_fois_permanence"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_google_oauth_config" model="ir.ui.view">
+        <field name="name">Google OAuth Configuration</field>
+        <field name="model">auth.oauth.provider</field>
+        <field name="arch" type="xml">
+            <form string="OAuth Configuration">
+                <sheet>
+                    <group>
+                        <field name="client_id"/>
+                        <field name="client_secret"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

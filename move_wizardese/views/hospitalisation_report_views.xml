@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue du wizard -->
+    <record id="view_account_move_insurance_report_wizard_form" model="ir.ui.view">
+        <field name="name">account.move.insurance.wizard.form</field>
+        <field name="model">account.move.insurance.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generer le rapport">
+                <sheet>
+                    <group>
+                        <group string="Filtres">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        <group string="Entites">
+                            <field name="insurance_ids" widget="many2many_tags"/>
+                            <field name="societe_ids" widget="many2many_tags"/>                        
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_generate_report" string="Generer le rapport" type="object" class="oe_highlight"/>
+                        <button string="Annuler" class="oe_link" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action pour ouvrir le wizard -->
+    <record id="action_account_move_insurance_report_wizard" model="ir.actions.act_window">
+        <field name="name">Rapport des assurances</field>
+        <field name="res_model">account.move.insurance.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="insurance_report_menu"
+        name="Rapport assurance"
+        action="action_account_move_insurance_report_wizard"
+        parent="account_accountant.menu_accounting"
+        sequence="100"/>
+</odoo>

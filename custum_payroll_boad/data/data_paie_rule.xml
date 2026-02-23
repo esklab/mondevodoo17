@@ -1,0 +1,83 @@
+<odoo>
+    <data noupdate="1">
+        <record id="prime_logement_15" model="hr.salary.rule">
+            <field name="name">Indemnité de logement BOAD</field>
+            <field name="code">prime_logement_boad</field>
+            <field name="category_id" ref="th_custum_payroll.gain_imposable"/>
+            <field name="sequence">5002</field>
+            <field name="struct_id" ref="th_custum_payroll.togo_salary_structure_id"/>
+            <field name="active">TRUE</field>
+            <field name="appears_on_payslip">TRUE</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=0
+                if contract.type_salary_id and contract.rang_id:
+                    type_salary = contract.type_salary_id.name
+                    rang = contract.rang_id.name
+                    if type_salary == 'CATEGORIES':
+                      if rang in ['1ER', '2EME', '3EME']:
+                        result = 50000.0
+                      elif rang in ['4EME', '5EME', '6EME']:
+                        result = 60000.0
+                      elif rang == '7EME':
+                        result = 65000.0
+                      else:
+                        result = 0.0
+                    elif type_salary == 'CLASSES':
+                     if rang in ['I', 'II', 'III']:
+                        result = 80000.0
+                     elif rang in ['IV']:
+                        result = 100000.0
+                     elif rang in ['V', 'VI']:
+                       result = 150000.0
+                     elif rang in ['VII']:
+                       result = 250000.0
+                     elif rang in ['VIII']:
+                       result = 450000.0
+                     else:
+                        result = 0.0
+                    else:
+                      result=0.0
+            </field>
+        </record>
+        
+        <record id="prime_transport_15" model="hr.salary.rule">
+            <field name="name">Indemnité de Transport BOAD</field>
+            <field name="code">prime_transport_boad</field>
+            <field name="category_id" ref="th_custum_payroll.gain_imposable"/>
+            <field name="sequence">5001</field>
+            <field name="struct_id" ref="th_custum_payroll.togo_salary_structure_id"/>
+            <field name="active">TRUE</field>
+            <field name="appears_on_payslip">TRUE</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=0
+                if contract.type_salary_id and contract.rang_id:
+                    type_salary = contract.type_salary_id.name
+                    rang = contract.rang_id.name
+                    if type_salary == 'CATEGORIES':
+                      if rang in ['1ER', '2EME', '3EME']:
+                        result = 49000.0
+                      elif rang in ['4EME', '5EME', '6EME', '7EME']:
+                        result = 56000.0
+                      else:
+                        result = 0.0
+                    elif type_salary == 'CLASSES':
+                     if rang in ['I', 'II', 'III']:
+                        result = 70000.0
+                     elif rang in ['IV']:
+                        result = 73500.0
+                     elif rang in ['V']:
+                       result = 100000.0
+                     elif rang in ['VI']:
+                       result = 125000.0
+                     elif rang in ['VII']:
+                       result = 175000.0
+                     elif rang in ['VIII']:
+                       result = 250000.0
+                     else:
+                        result = 0.0
+                    else:
+                      result=0.0
+            </field>
+        </record>
+    </data>
+</odoo>

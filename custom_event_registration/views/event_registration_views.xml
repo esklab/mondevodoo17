@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View event.registration form -->
+    <record id="view_event_registration_form" model="ir.ui.view">
+        <field name="name">view.event.registration.form</field>
+        <field name="model">event.registration</field>
+        <field name="inherit_id" ref="event.view_event_registration_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <header>
+                    <button name="action_confirm_registration" 
+                            string="Valider" 
+                            type="object" 
+                            class="btn-primary"
+                            states="preinscript"/>
+                    <button name="action_mark_present" 
+                            string="Présent" 
+                            type="object" 
+                            class="btn-success"
+                            states="open"/>
+                    <button name="action_decline" 
+                            string="Décliner" 
+                            type="object" 
+                            class="btn-danger"
+                            states="preinscript,open"
+                            confirm="Êtes-vous sûr de vouloir décliner et supprimer cette inscription ?"/>
+                    <field name="state" widget="statusbar" 
+                           statusbar_visible="preinscript,open,done"/>
+                </header>    
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

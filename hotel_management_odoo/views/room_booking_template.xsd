@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="template">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="t">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="t">
+                                <xs:complexType>
+                                    <xs:attribute name="t-set" use="required" />
+                                    <xs:attribute name="t-value" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="div">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="h1" type="xs:string" />
+                                        <xs:element name="form">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="div" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="label">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension
+                                                                                base="xs:string">
+                                                                                <xs:attribute
+                                                                                    name="for"
+                                                                                    use="required" />
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="input"
+                                                                    minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="type"
+                                                                            use="required" />
+                                                                        <xs:attribute name="name"
+                                                                            use="required" />
+                                                                        <xs:attribute
+                                                                            name="required"
+                                                                            use="required"
+                                                                            fixed="required" />
+                                                                        <xs:attribute name="class"
+                                                                            use="required"
+                                                                            fixed="form-control" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="select"
+                                                                    minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="t">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element
+                                                                                            name="option">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element
+                                                                                                        name="t">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:attribute
+                                                                                                                name="t-esc"
+                                                                                                                use="required" />
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                                <xs:attribute
+                                                                                                    name="t-att-value"
+                                                                                                    use="required" />
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute
+                                                                                        name="t-foreach"
+                                                                                        use="required" />
+                                                                                    <xs:attribute
+                                                                                        name="t-as"
+                                                                                        use="required" />
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute name="name"
+                                                                            use="required" />
+                                                                        <xs:attribute
+                                                                            name="multiple"
+                                                                            use="required" />
+                                                                        <xs:attribute name="class"
+                                                                            use="required" />
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="class"
+                                                                use="required" fixed="form-group" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="button">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="type"
+                                                                        use="required" />
+                                                                    <xs:attribute name="class"
+                                                                        use="required" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="action" use="required" />
+                                                <xs:attribute name="method" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="class" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="t-call" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" use="required" />
+            <xs:attribute name="name" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

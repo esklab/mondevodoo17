@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<record id="view_note_frais_form" model="ir.ui.view">
+    <field name="name">note.frais.form</field>
+    <field name="model">gestion_notes_frais.note_frais</field>
+       <field name="priority" eval="8" />
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="category"/>
+                    <field name="description"/>
+                    <field name="mission_id"/>
+                    <!-- Champs spécifiques à chaque catégorie... -->
+                    <!-- Champs spécifiques à la catégorie Transport -->
+                    <field name="type_transport" invisible="category != 'transport'"/>
+                    <field name="category_emp" invisible="category != 'transport'"/>
+                    <field name="type_billet" invisible="category != 'transport'"/>
+                    <field name="montant_transport" invisible="category != 'transport'"/>
+                    <field name="reference_billet" invisible="category != 'transport'"/>
+                    <field name="compagnie" invisible="category != 'transport'"/>
+                    <!-- Ajoutez d'autres champs spécifiques à la catégorie Transport ici -->
+                    <!-- Champs spécifiques à la catégorie Logement -->
+                    <field name="nom_hotel" invisible="category != 'logement'"/>
+                    <field name="nombre_nuitees" invisible="category != 'logement'"/>
+                    <field name="montant_logement" invisible="category != 'logement'"/>
+
+
+                    <!-- Ajoutez d'autres champs spécifiques à la catégorie communication ici -->
+
+                    <field name="comm_categorie" invisible="category != 'communication'"/>
+                    <field name="comm_duree" invisible="category != 'communication'"/>
+                    <field name="comm_montant" invisible="category != 'communication'"/>
+
+                    <!-- Ajoutez d'autres champs spécifiques à la Deplacement locaux ici -->
+
+                    <field name="deplacement_zone" invisible="category != 'deplacement'"/>
+                    <field name="deplacement_duree" invisible="category != 'deplacement'"/>
+                    <field name="deplacement_montant" invisible="category != 'deplacement'"/>
+
+                    <!-- Ajoutez d'autres champs spécifiques à frais de liaison ici -->
+                    <field name="liaison_zone" invisible="category != 'liaison'"/>
+                    <field name="liaison_montant" invisible="category != 'liaison'"/>
+                    <!-- Ajoutez d'autres champs spécifiques à indemnité jours ici -->
+
+                    <field name="indemnite_zone" invisible="category != 'indemnite'"/>
+                    <field name="indemnite_duree" invisible="category != 'indemnite'"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+</odoo>

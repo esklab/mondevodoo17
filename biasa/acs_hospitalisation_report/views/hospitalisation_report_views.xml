@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hospitalisation_annual_report_wizard_form" model="ir.ui.view">
+        <field name="name">hospitalisation.annual.report.wizard.form</field>
+        <field name="model">acs.hospitalisation.annual.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Générer le rapport annuel">
+                <sheet>
+                    <group>
+                        <field name="year"/>
+                        <field name="gender"/>                        
+                    </group>
+                    <footer>
+                        <button name="print_report" string="Générer le rapport" type="object" class="oe_highlight"/>
+                        <button string="Annuler" class="oe_link" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hospitalisation_annual_report_wizard" model="ir.actions.act_window">
+        <field name="name">Rapport Annuel d'Hospitalisation</field>
+        <field name="res_model">acs.hospitalisation.annual.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_hospitalisation_annual_report_wizard_form"/>
+    </record>
+
+    <menuitem id="menu_hospitalisation_annual_report" 
+              name="Rapport Annuel" 
+              parent="acs_hms_hospitalization.main_menu_hospitalization" 
+              action="action_hospitalisation_annual_report_wizard"
+              sequence="20"/>
+</odoo>

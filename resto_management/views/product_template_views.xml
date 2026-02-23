@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View product.template form -->
+    <record id="view_product_template_form" model="ir.ui.view">
+        <field name="name">view.product.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_ok']" position="after">
+                <field name="is_resto" groups="base.group_user"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_restaurant_products" model="ir.actions.act_window">
+        <field name="name">Produits du Restaurant</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_restaurant_products" name="Produits" parent="menu_restaurant" action="action_restaurant_products"/>
+
+</odoo>

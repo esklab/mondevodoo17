@@ -1,0 +1,2 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_need_express_manager,need_express_manager,model_need_express,base.group_user,1,1,1,1

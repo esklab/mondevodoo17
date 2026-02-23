@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View acs.hospitalization form -->
+    <record id="view_acs_hospitalization_form" model="ir.ui.view">
+        <field name="name">view.acs.hospitalization.form</field>
+        <field name="model">acs.hospitalization</field>
+        <field name="inherit_id" ref="acs_hms_hospitalization.view_acs_hospitalization_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='acs_invoice_forecast']" position="replace">
+                <button type="object" class="oe_stat_button" icon="fa-money" name="acs_invoice_forecast" invisible="state not in ['hosp','discharged','autorized']" groups="account.group_account_invoice" string="Invoice Forecast"/>
+                <button type="object" class="oe_stat_button" icon="fa-pencil-square-o" name="view_invoice" invisible="state not in ['hosp','discharged','autorized','done']" groups="account.group_account_invoice">
+                    <field string="Invoices" name="invoice_count" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//button[@name='action_discharge']" position="after">
+                <button name="action_autorise" type="object" string="Autorisation medicales de sortue " class="oe_highlight" invisible="state!='hosp'" groups="acs_hms_hospitalization.group_acs_hms_hospitalization_executive"/>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="state" widget="statusbar" statusbar_visible="draft,confirm,hosp,discharged,autorised,done"/>
+            </xpath>
+            <xpath expr="//button[@name='action_create_invoice']" position="replace">
+                <button name="action_create_invoice" string="Create Invoice" class="oe_highlight" type="object" invisible="state not in ('discharged', 'autorised') or invoice_exempt" groups="account.group_account_invoice"/>
+            </xpath>
+            <xpath expr="//button[@name='action_done']" position="replace">
+                <button name="action_done" string="Done" type="object" class="oe_highlight" 
+                    groups="acs_hms_hospitalization.group_acs_hms_hospitalization_executive,acs_hms.group_hms_medical_officer" 
+                    invisible="state not in ('discharged', 'autorised') or invoice_count==0 or invoice_exempt"/>
+                <button name="action_done" string="Done" type="object" class="oe_highlight" 
+                    groups="acs_hms_hospitalization.group_acs_hms_hospitalization_executive,acs_hms.group_hms_medical_officer" 
+                    invisible="state not in ('discharged', 'autorised') or not invoice_exempt"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

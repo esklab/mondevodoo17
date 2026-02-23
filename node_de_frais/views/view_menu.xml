@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_note_frais" name="NoteFrais"/>
+        <menuitem id="menu_note_frais_element" name="Custom Note de frais" parent="menu_note_frais" action="action_open_note_frais_form"/>
+    </data>
+</odoo>

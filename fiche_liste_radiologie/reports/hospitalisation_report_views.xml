@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Report Action -->
+    <record id="action_patient_radiology_test_list" model="ir.actions.report">
+        <field name="name">Liste Résultats Radiologie</field>
+        <field name="model">patient.radiology.test</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">fiche_liste_radiologie.report_patient_radiology_test_list</field>
+        <field name="report_file">fiche_liste_radiologie.report_patient_radiology_test_list</field>
+        <field name="binding_model_id" ref="acs_radiology.model_patient_radiology_test"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- QWeb Template -->
+    <template id="report_patient_radiology_test_list">
+        <t t-call="web.external_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="oe_structure"
+                     style="border:1px solid #ccc; padding:10px; margin-bottom:20px; page-break-inside: avoid;">
+                    <h3 style="margin: 0 0 10px 0;">
+                        <strong><t t-esc="doc.patient_id.name"/> (<t t-esc="doc.patient_id.internal_id or doc.patient_id.id"/>)</strong>
+                    </h3>
+                    <p style="margin: 0 0 5px 0;">
+                        <strong>Âge :</strong> <t t-esc="doc.patient_age or ''"/>
+                        &nbsp;|&nbsp;
+                        <strong>Sexe :</strong> <t t-esc="dict({'male': 'Masculin', 'female': 'Féminin'}).get(doc.patient_gender, '')"/>
+                        &nbsp;|&nbsp;
+                        <strong>Date Réalisation :</strong>
+                        <t t-esc="doc.date_realisation.strftime('%d/%m/%Y') if doc.date_realisation else ''"/>
+                    </p>
+                    <p style="margin: 0 0 5px 0;">
+                        <strong>Examens :</strong> <t t-esc="doc.exam_name or ''"/>
+                    </p>
+                    <t t-if="doc.service_id">
+                        <p style="margin: 0;">
+                            <strong>Service :</strong> <t t-esc="doc.service_id.name"/>
+                        </p>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

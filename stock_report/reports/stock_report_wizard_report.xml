@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_stock_report_wizard" model="ir.actions.report">
+        <field name="name">Stock Report Wizard</field>
+        <field name="model">stock.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">addon.report_stock_report_wizard_view</field>
+        <field name="report_file">addon.report_stock_report_wizard</field>
+        <field name="print_report_name">'%s' % object.name</field>
+        <field name="binding_model_id" ref="model_stock_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+<template id="report_stock_document">
+    <t t-call="web.external_layout">
+        <div class="page">
+            <h2>Rapport de Stock</h2>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Prix</th>
+                        <th>Stock Initial</th>
+                        <th>Stock Entrant</th>
+                        <th>Ventes</th>
+                        <th>Stock Actuel</th>
+                        <th>Valeur Totale des Ventes</th>
+                        <th>Marque</th>
+                        <th>Fournisseur</th>
+                        <th>Catégorie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="docs" t-as="product">
+                        <tr>
+                            <td t-esc="product.name"/></td>
+                            <td t-esc="product.list_price"/></td>
+                            <td t-esc="product.opening_stock"/></td>
+                            <td t-esc="product.stock_in"/></td>
+                            <td t-esc="product.sales"/></td>
+                            <td t-esc="product.stock_qty"/></td>
+                            <td t-esc="product.total_sales_value"/></td>
+                            <td t-esc="product.brand_id.name if product.brand_id else ''"/></td>
+                            <td t-esc="product.supplier_id.name if product.supplier_id else ''"/></td>
+                            <td t-esc="product.categ_id.name"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</template>
+
+
+</odoo>

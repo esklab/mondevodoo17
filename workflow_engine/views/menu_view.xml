@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu pour le Workflow -->
+        <menuitem id="menu_workflow_management" name="Gestion des Workflows" sequence="10"/>
+        <menuitem id="menu_workflow_model" name="Workflows" parent="menu_workflow_management" action="action_workflow_model"/>
+        <menuitem id="menu_workflow_state" name="États" parent="menu_workflow_management" action="action_workflow_state"/>
+        <menuitem id="menu_workflow_transition" name="Transitions" parent="menu_workflow_management" action="action_workflow_transition"/>
+        <menuitem id="menu_workflow_trash" name="Corbeille des Validations" parent="menu_workflow_management" action="action_workflow_trash"/>
+        <menuitem id="menu_workflow_history" name="Historique des Validations" parent="menu_workflow_management" action="action_workflow_history"/>
+    </data>
+</odoo>

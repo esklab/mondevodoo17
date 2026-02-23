@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--    Products menu action-->
+    <record id="lunch_product_action" model="ir.actions.act_window">
+        <field name="name">Produits</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('is_food', '=', True)]</field>
+    </record>
+    <!--    Vendors menu action-->
+    <record id="lunch_supplier_action" model="ir.actions.act_window">
+        <field name="name">Fournisseurs</field>
+        <field name="res_model">lunch.supplier</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <!--    Products Menu-->
+    <menuitem id="lunch_product_menu"
+              name="Produits"
+              action="lunch_product_action"
+              parent="food_menu"
+              sequence="10"/>
+    <!--    Vendors Menu-->
+    <menuitem id="lunch_supplier_menu"
+              name="Fournisseurs"
+              action="lunch_supplier_action"
+              parent="food_menu"
+              sequence="20"/>
+</odoo>

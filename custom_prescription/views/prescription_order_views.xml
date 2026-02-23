@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View prescription.order form -->
+    <record id="view_prescription_order_form" model="ir.ui.view">
+        <field name="name">view.prescription.order.form</field>
+        <field name="model">prescription.order</field>
+        <field name="inherit_id" ref="acs_hms.view_hms_prescription_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <field name="submit_state" invisible="1"/>
+                <button name="action_create_stock_picking" class="btn-primary" string="Soumettre a la pharmacie" type="object" invisible="submit_state=='submitted'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

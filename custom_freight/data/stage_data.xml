@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="stage_waiting_approval" model="shipment.stage">
+            <field name="name">En attente</field>
+            <field name="sequence">1</field>
+        </record>
+        
+        <record id="stage_approved" model="shipment.stage">
+            <field name="name">Approuvé</field>
+            <field name="sequence">2</field>
+        </record>
+        
+        <record id="stage_rejected" model="shipment.stage">
+            <field name="name">Rejeté</field>
+            <field name="sequence">3</field>
+        </record> 
+
+        <record id="stage_declared" model="shipment.stage">
+            <field name="name">Déclaré</field>
+            <field name="sequence">4</field>
+        </record>  
+
+        <record id="stage_clotured" model="shipment.stage">
+            <field name="name">Cloturé</field>
+            <field name="sequence">5</field>
+        </record>   
+
+        <record id="project_stage_1" model="project.task.type">
+            <field name="name">A faire </field>
+            <field name="sequence">1</field>
+        </record>
+        
+        <record id="project_stage_2" model="project.task.type">
+            <field name="name">En cours</field>
+            <field name="sequence">2</field>
+        </record>
+        
+        <record id="project_stage_3" model="project.task.type">
+            <field name="name">Fait </field>
+            <field name="sequence">3</field>
+        </record>       
+        
+        <record id="custom_freight.project_template" model="project.project">
+            <field name="name">Template Projet Fret</field>
+            <field name="type_ids" eval="[(6, 0, [
+                ref('custom_freight.project_stage_1'),
+                ref('custom_freight.project_stage_2'),
+                ref('custom_freight.project_stage_3')
+            ])]"/>
+        </record>
+    </data>
+</odoo>

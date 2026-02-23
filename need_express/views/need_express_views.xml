@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View need.express View tree -->
+    <record id="view_need_express_tree" model="ir.ui.view">
+        <field name="name">view.need.express.tree</field>
+        <field name="model">need.express</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="date"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="applicant"/>
+                <field name="applicant_sign" widget="signature"/>
+                <field name="storekeeper_sign" widget="signature"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View need.express form -->
+    <record id="view_need_express_form" model="ir.ui.view">
+        <field name="name">view.need.express.form</field>
+        <field name="model">need.express</field>
+        <field name="arch" type="xml">
+            <form string="Need Express">
+                <field name="date"/>
+                <field name="product_id"/>
+                <field name="quantity"/>
+                <field name="applicant"/>
+                <field name="applicant_sign" widget="signature"/>
+                <field name="storekeeper_sign" widget="signature"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action need.express -->
+    <record id="action_need_express" model="ir.actions.act_window">
+        <field name="name">Need Express</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">need.express</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Need Express.
+            </p>
+        </field>
+    </record>
+
+</odoo>
