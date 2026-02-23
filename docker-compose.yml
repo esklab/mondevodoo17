@@ -1,0 +1,18 @@
+version: '3.2'
+services:
+  web:
+    image: odoo:latest
+    depends_on:
+      - db
+    ports:
+      - "8066:8069"
+    volumes:
+      - ./addons:/mnt/extra-addons
+    environment:
+      - AUTO_INSTALL="odoo,accounting"
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
